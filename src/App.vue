@@ -1,10 +1,10 @@
 <template>
     <el-container>
-        <el-header>Header</el-header>
+        <el-header class="header" v-if="showHeader">Header</el-header>
         <el-container>
-            <el-aside width="20%">Aside</el-aside>
+            <el-aside width="20%" v-if="showLeft">Aside</el-aside>
             <el-main>
-                <router-view/>
+                <router-view v-on:hideHeaderAndLeft="hideHeaderAndLeft"/>
             </el-main>
         </el-container>
     </el-container>
@@ -12,8 +12,24 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return {
+        showHeader : true,
+        showLeft : true
+    }
+  },
+  methods:{
+    hideHeaderAndLeft(data){
+        if(data.hide){
+            this.showHeader = false;
+            this.showLeft = false;
+        }
+    }
+  }
 }
 </script>
 
 <style src="./assets/css/basic.css"></style>
+
+<style src="./assets/css/framework.css"></style>
