@@ -10,20 +10,24 @@
 			</el-form-item>
 			<el-form-item>
 			    <el-button type="primary" @click="login">登录</el-button>
+			    <el-button type="primary" @click="reset">重置</el-button>
 			</el-form-item>
 		</el-form>
+		<p>推荐使用IE8+/chrome/firfox等浏览器访问本站</p>
 	</div>
 </template>
 
 <script>
 import eking from "@/lib/eking"
+import sweet from "sweetalert"
+
 export default{
 	name: 'login',
 	data(){
 		return {
 			labelPosition: 'right',
-			username:'',
-			password:''
+			username:'hustwxw',
+			password:'hustwxw'
 		};
 	},
 	methods:{
@@ -34,36 +38,38 @@ export default{
 				password : _this.password
 			},function(json){
 				if(json.code == 0){
-					alert();
+					// 记录用户名
+					_this.$store.dispatch('setLogined',{
+						username : _this.username
+					});
+					// 跳转页面
+					_this.$router.push({path:'/page/color'})
 				}
 			})
+		},
+		reset(){
+			this.username = "";
+			this.password = "";
 		}
 	},
 	mounted(){
-		this.$emit("hideHeaderAndLeft",{hide:true})
+		this.$emit("hideHeaderAndLeft",{hide:true})		
 	}
 }	
 </script>
 
-<style>
+<style scoped>
 .login_wrap{
 	display: flex;
 	width:500px;
 	height:300px;
 	box-shadow: 2px 2px 2px #d5d5d5;
-	background-color: #3c8dbc;
+	background-color: #7ccfff;
 	border-radius: 5px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-.el-container{
-	height:100%;
-}
-.el-main{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin: 0px auto;
 }
 .title{
 	display: flex;

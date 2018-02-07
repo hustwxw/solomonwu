@@ -12,9 +12,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
 
+import vuex from '@/vuex/index.js'
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store:vuex.store,
   router,
   components: { App },
   template: '<App/>'
