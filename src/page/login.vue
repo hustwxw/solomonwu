@@ -33,6 +33,8 @@ export default{
 	methods:{
 		login(){
 			var _this = this;
+			_this.$router.push({path:'/form/input'})
+			return false;
 			eking.net.get("login",{
 				user : _this.username,
 				password : _this.password
