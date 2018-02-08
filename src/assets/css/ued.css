@@ -1,0 +1,90 @@
+
+.ued-input::-webkit-input-placeholder{
+	font-size: 14px;
+	color: #909399;
+	letter-spacing: 0.3px;
+	font-weight: 100;
+}
+
+.ued-input:focus{
+	outline: none;
+    border-color: #409eff;
+}
+.ued-input{
+	border: 1px solid #DCDFE6;
+	border-radius: 4px;
+	width:240px;
+	height:40px;
+	font-size: 14px;
+	color: #909399;
+	padding-left:15px;
+	letter-spacing: 0;
+	line-height: 14px;
+	box-sizing: border-box;
+}
+
+.ued-input-compose{
+	box-sizing: border-box;	
+	width:320px;
+	height:40px;
+	position: relative;
+}
+
+.ued-input-compose i{
+	display: inline-block;
+	width:0px;
+	height:0px;
+	border-top: 5px solid #999999;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	position: relative;
+	top:-2px;
+	left:2px;
+	cursor: pointer;
+}
+
+.ued-input-compose.ued-input-compose_bg{
+	background-color: #F5F7FA ;
+}
+
+.ued-input-compose .ued-input-compose-tag{
+	box-sizing: border-box;
+	width:80px;
+	height:100%;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	border: 1px solid #DCDFE6;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	text-align: center;
+	font-size: 14px;
+	color: #909399;
+	letter-spacing: 0;
+	line-height: 40px;
+}
+
+.ued-input-compose .ued-input{
+	height:100%;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	position: absolute;
+	left: 79px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.ued-tag{
+	box-sizing: border-box;	
+	width:auto;
+	min-width: 240px;
+	height:40px;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 10px;
+}

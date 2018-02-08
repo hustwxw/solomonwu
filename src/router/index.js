@@ -5,7 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 Vue.use(Router)
 
 const Login = r => require.ensure([], () => r(require('@/page/login')), 'login_page');
-const ColorPage = r => require.ensure([], () => r(require('@/page/content/colorPage')), 'colorPage_page');
+const form_input = r => require.ensure([], () => r(require('@/page/content/form/input')), 'content_form_input');
 
 export default new Router({
   routes: [
@@ -15,9 +15,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/page/color',
-      name: 'colorPage',
-      component: ColorPage
+      path: '/form/input',
+      name: 'form_input',
+      component: form_input
     }
   ]
 })

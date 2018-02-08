@@ -43,7 +43,7 @@ export default{
 						username : _this.username
 					});
 					// 跳转页面
-					_this.$router.push({path:'/page/color'})
+					_this.$router.push({path:'/form/input'})
 				}
 			})
 		},

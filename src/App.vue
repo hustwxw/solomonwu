@@ -103,6 +103,8 @@ export default {
 
 <style src="./assets/css/framework.css"></style>
 
+<style src="./assets/css/ued.css"></style>
+
 <style scoped>
   .header{
     height:62px;

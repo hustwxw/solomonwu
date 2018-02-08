@@ -340,7 +340,7 @@ select { color:#000; font-size:12px;font-family:Microsoft YaHei}
 .radio{ margin:0 5px; *margin:0 2px; vertical-align:-2px;*vertical-align:middle;}
 .checkbox{ margin:0 5px 0 2px;*margin:0 3px 0 0px;vertical-align:-2px;*vertical-align:middle;}
 
-input[type="text"],input[type="password"],textarea{
+/*input[type="text"],input[type="password"],textarea{
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
   -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
@@ -352,7 +352,7 @@ input[type="text"]:focus,input[type="password"]:focus,textarea:focus{
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);}
-
+*/
 input[type="button"]{outline:none;}  
 input[type="button"]:hover{filter:alpha(opacity=80);opacity:0.8;}
 input[type="radio"]{outline:none;}
@@ -373,28 +373,5 @@ input[type="checkbox"]{outline:none;}
 }
 .clearfix {
   display:block;
-}
-.none{
-  display: none !important;
-}
-
-.cp{
-  cursor: pointer !important;
-}
-
-.cd{
-  cursor: default !important;
-}
-
-.tran{
-  transition: all .3s linear !important;
-}
-
-.tc{
-  text-align: center;
-}
-
-.ps{
-  position:relative;
 }
 /** end 清除浮动 **/
