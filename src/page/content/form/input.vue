@@ -8,6 +8,13 @@
 			<pre>&lt;input type=&quot;text&quot; class=&quot;ued-input&quot; placeholder=&quot;请输入内容&quot;&gt;</pre>
 		</div>
 		<div class="row">
+			<span class="ued-tag">基础用法(禁用)</span><input type="text" class="ued-input" disabled placeholder="内容" value="这里禁止输入"><a href="javascript:void(0)" class="view" @click="view('uedInputNoAllowed')">示例代码</a>						
+		</div>
+		<div class="row" v-if="flag.uedInputNoAllowed">
+			<span class="ued-tag"></span>
+			<pre>&lt;input type=&quot;text&quot; class=&quot;ued-input&quot; disabled placeholder=&quot;内容&quot; value=&quot;这里禁止输入&quot;&gt;</pre>
+		</div>
+		<div class="row">
 			<span class="ued-tag">复合型输入框</span>
 			<div class="ued-input-compose">
 				<div class="ued-input-compose-tag">请选择<i></i></div>
@@ -49,6 +56,7 @@ export default{
 		return {
 			flag:{
 				'uedInput':false,
+				'uedInputNoAllowed':false,
 				'uedInputCompose':false,
 				'uedInputComposeBg':false
 			}

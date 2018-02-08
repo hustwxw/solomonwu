@@ -6,6 +6,12 @@
 	font-weight: 100;
 }
 
+.ued-input[disabled]{
+	cursor: not-allowed;
+	background-color: #DCDFE6;
+	color:#F5F7FA;
+}
+
 .ued-input:focus{
 	outline: none;
     border-color: #409eff;
