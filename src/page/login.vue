@@ -13,7 +13,7 @@
 			    <el-button type="primary" @click="reset">重置</el-button>
 			</el-form-item>
 		</el-form>
-		<p>推荐使用IE8+/chrome/firfox等浏览器访问本站</p>
+		<p>推荐使用IE11+/chrome/firfox等浏览器访问本站</p>
 	</div>
 </template>
 

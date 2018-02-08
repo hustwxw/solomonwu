@@ -1,6 +1,6 @@
 <template>
     <el-container class="wrap">
-        <el-header class="header" v-show="showHeader">Header</el-header>
+        <el-header class="header" v-show="showHeader">用户体验中心Logo</el-header>
         <el-container>
             <el-aside class="aside" width="15.652%" v-show="showLeft">
               <ul class="menu_ul">
@@ -109,6 +109,8 @@ export default {
   .header{
     height:62px;
     background-color: #1E262F;
+    line-height: 62px;
+    color:white;
   }
   .aside{
     background-color: #2E3640;
