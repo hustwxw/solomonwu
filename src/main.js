@@ -14,17 +14,6 @@ Vue.use(ElementUI)
 
 import vuex from '@/vuex/index.js'
 
-import hljs from 'highlight.js'
-import 'highlight.js/styles/googlecode.css' //样式文件
-
-Vue.directive('highlight',function (el) {
-// debugger
-  let blocks = el.querySelectorAll('pre code');
-  blocks.forEach((block)=>{
-    hljs.highlightBlock(block)
-  })
-})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
