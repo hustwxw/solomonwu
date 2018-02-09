@@ -1,0 +1,2 @@
+webpackJsonp([2],{"5+BU":function(e,t){},e9sF:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"content"},[this._v("\n\t抱歉，你的页面丢失了！\n")])},staticRenderFns:[]};var i=n("VU/8")({name:"nofound",mounted:function(){this.$emit("hideHeaderAndLeft",{show:!0})}},s,!1,function(e){n("5+BU")},"data-v-54039f42",null);t.default=i.exports}});
+//# sourceMappingURL=2.6956965f5edb015d879a.js.map
