@@ -49,6 +49,33 @@
 	cursor: pointer;
 }
 
+.ued-input-compose ul.none{
+	display: none;
+}
+
+.ued-input-compose ul{
+	display: inline-block;
+	position: absolute;
+	width:80px;
+	box-sizing: border-box;
+	height:auto;
+	min-height: 40px;
+	background-color: white;
+	top:39px;
+	left:0px;
+	border:1px solid #d5d5d5;
+}
+.ued-input-compose ul li{
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+.ued-input-compose ul li:hover,
+.ued-input-compose ul li.hover{
+	background-color: #F5F7FA;
+	color:#999;
+}
+
 .ued-input-compose.ued-input-compose_bg{
 	background-color: #F5F7FA ;
 }
@@ -79,6 +106,53 @@
 	left: 79px;
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
+}
+
+.ued-input.ued-input-success{
+	border:1px solid #67C23A;	
+}
+
+.ued-input.ued-input-error{
+	border:1px solid #FA5555;	
+}
+
+.ued-input-success,.ued-input-error{
+	box-sizing: border-box;	
+	width:240px;
+	height:40px;
+	position: relative;
+}
+
+.ued-input-success i{
+	display: inline-block;
+	width:30px;
+	height:30px;
+	position: absolute;
+	right: 1px;
+	bottom: 5px;
+	background:url(../images/input_right.png) no-repeat center center;
+	background-color: white;	
+}
+
+.ued-input-error i{
+	display: inline-block;
+	width:30px;
+	height:30px;
+	position: absolute;
+	right: 1px;
+	bottom: 5px;
+	background:url(../images/input_error.png) no-repeat center center;
+	background-color: white;	
+}
+
+.ued-input-success .ued-input,
+.ued-input-success .ued-input:focus{
+	border:1px solid #67C23A;
+}
+
+.ued-input-error .ued-input,
+.ued-input-error .ued-input:focus{
+	border:1px solid #FA5555;
 }
 
 .ued-tag{
