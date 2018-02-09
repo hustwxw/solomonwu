@@ -113,7 +113,7 @@ export default {
         }
     },
     nav(event){      
-      location.hash = event.target.getAttribute('hash') || "nofound";
+      location.hash = event.target.getAttribute('hash') || "#/nofound";
       var index = event.target.getAttribute('index');
       var menuData = this.menus[index];
       this.menus.forEach(function(ele,i){

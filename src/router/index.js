@@ -27,7 +27,7 @@ export default new Router({
       component: desc
     },
     {
-      path: '*',
+      path: '/nofound',
       name: 'nofound',
       component: nofound
     }
