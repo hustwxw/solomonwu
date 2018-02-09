@@ -33,7 +33,7 @@ export default{
 	methods:{
 		login(){
 			var _this = this;
-			_this.$router.push({path:'/form/input'})
+			_this.$router.push({path:'/desc/index'})
 			return false;
 			eking.net.get("login",{
 				user : _this.username,
@@ -45,7 +45,7 @@ export default{
 						username : _this.username
 					});
 					// 跳转页面
-					_this.$router.push({path:'/form/input'})
+					_this.$router.push({path:'/desc/index'})
 				}
 			})
 		},

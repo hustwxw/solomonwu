@@ -1,10 +1,13 @@
 <template>
     <el-container class="wrap">
-        <el-header class="header" v-show="showHeader">用户体验中心Logo</el-header>
+        <el-header class="header" v-show="showHeader">
+            <div class="logo"></div>
+            <span class="webname">用户体验中心</span>
+        </el-header>
         <el-container>
-            <el-aside class="aside" width="15.652%" v-show="showLeft">
+            <el-aside class="aside" width="16%" v-show="showLeft">
               <ul class="menu_ul">
-                <li v-bind:class="{menu_li:true,first:menu.first,second:menu.second,third:menu.third}" v-for="menu in menus">{{menu.name}}</li>
+                <li @click="nav" v-bind:index="index" v-bind:hash="menu.hash" v-bind:class="{menu_li:true,first:menu.first,second:menu.second,third:menu.third,hover:menu.hover}" v-for="(menu,index) in menus">{{menu.name}}</li>
               </ul>
             </el-aside>
             <el-main>
@@ -25,62 +28,76 @@ export default {
                 name: '说明',
                 first: true,
                 second: false,
-                third: false
+                third: false,
+                hash : '#/desc/index',
+                hover : true
             }, {
                 name: '组件',
                 first: true,
                 second: false,
-                third: false
+                third: false,
+                hover : false
             }, {
                 name: 'Basic',
                 first: false,
                 second: true,
-                third: false
+                third: false,
+                hover : false
             }, {
                 name: '配色 Color',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: '布局 Layout',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: '字体 Typography',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: '图标 Icon',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: '按钮 Button',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: 'Form',
                 first: false,
                 second: true,
-                third: false
+                third: false,
+                hover : false
             }, {
                 name: '单选框 Radio',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: '复选框 Checkbox',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hover : false
             }, {
                 name: '输入框 Input',
                 first: false,
                 second: false,
-                third: true
+                third: true,
+                hash : '#/form/input',
+                hover : false
             }]
         }
   },
@@ -94,6 +111,18 @@ export default {
             this.showHeader = true;
             this.showLeft = true;
         }
+    },
+    nav(event){      
+      location.hash = event.target.getAttribute('hash') || "nofound";
+      var index = event.target.getAttribute('index');
+      var menuData = this.menus[index];
+      this.menus.forEach(function(ele,i){
+        ele.hover = false;
+      });
+      menuData.hover = true;
+      if(menuData.third == true){
+        this.menus[1].hover = true;
+      }
     }
   }
 }
@@ -141,6 +170,7 @@ export default {
     box-sizing: border-box;
     letter-spacing: -0.31px;
     font-weight:bold;
+    transition:all .2s linear;
   }
   .menu_li.second{
     font-size: 16px;
@@ -161,5 +191,21 @@ export default {
   }
   .menu_li.first:hover,.menu_li.first.hover{
     background-color: #0486FE;
+  }
+  .logo{
+    background:url(./assets/images/logo.png) no-repeat center center;
+    height:32px;
+    width:111.2px;
+    display: inline-block;
+    margin-top:14px;
+  }
+  .webname{
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: -0.38px;
+    line-height: 60px;
+    display: inline-block;
+    position: relative;
+    top:-8px;    
   }
 </style>
