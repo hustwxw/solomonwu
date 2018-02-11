@@ -1,4 +1,21 @@
 
+/*box start*/
+.ued-box-basic{
+	display: inline-block;
+	width:200px;
+	height:200px;
+	box-sizing: border-box;
+	padding:0px;
+	margin:0px;
+}
+.ued-box-padding{
+	padding:20px;
+}
+.ued-box-margin{
+	margin:20px;
+}
+/*box end*/
+
 /*input start*/
 .ued-input-basic::-webkit-input-placeholder{
 	font-size: 14px;

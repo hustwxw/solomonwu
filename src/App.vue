@@ -75,6 +75,13 @@ export default {
                 hover : false,
                 hash : '#/basic/button'
             }, {
+                name: '盒子模型 Box',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/basic/box'
+            }, {
                 name: 'Form',
                 first: false,
                 second: true,

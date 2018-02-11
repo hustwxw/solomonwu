@@ -90,3 +90,8 @@ body,.el-main{
 	font-size: 14px;
 	color: white;
 }
+
+.ued-box-basic{
+	background-color: lightblue;
+	border:1px solid black;
+}

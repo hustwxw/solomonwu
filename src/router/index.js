@@ -8,6 +8,7 @@ const desc = r => require.ensure([], () => r(require('@/page/desc/desc')), 'desc
 const nofound = r => require.ensure([], () => r(require('@/page/nofound')), 'nofound_page');
 const form_input = r => require.ensure([], () => r(require('@/page/content/form/input')), 'content_form_input');
 const basic_button = r => require.ensure([], () => r(require('@/page/content/basic/button')), 'content_basic_button');
+const basic_box = r => require.ensure([], () => r(require('@/page/content/basic/box')), 'content_basic_box');
 
 export default new Router({
   routes: [
@@ -20,6 +21,11 @@ export default new Router({
       path: '/basic/button',
       name: 'basic_button',
       component: basic_button
+    },
+    {
+      path: '/basic/box',
+      name: 'basic_box',
+      component: basic_box
     },
     {
       path: '/form/input',
