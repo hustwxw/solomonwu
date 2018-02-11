@@ -98,7 +98,7 @@ import copy from "copy-to-clipboard"
 import $ from "jquery"
 
 export default{
-	name: 'basicInput',
+	name: 'formInput',
 	data(){
 		return {
 			map:{
@@ -135,11 +135,13 @@ export default{
 				},
 				uedInputSuccess:{
 					flag : false,
-					html : '<div class="ued-input-success"><input type="text" class="ued-input-basic"><i></i></div>'
+					html : '<div class="ued-input-normal ued-input-success"> \n\v\v\v\v <input type="text" class="ued-input-basic"><i></i> \n</div>',
+					scriptText : '恢复正常输入框，可以去掉ued-input-success样式类即可'
 				},
 				uedInputError:{
 					flag : false,
-					html : '<div class="ued-input-error"><input type="text" class="ued-input-basic"><i></i></div>'
+					html : '<div class="ued-input-normal ued-input-error"> \n\v\v\v\v <input type="text" class="ued-input-basic"><i></i> \n</div>',
+					scriptText : '恢复正常输入框，可以去掉ued-input-error样式类即可'
 				},
 				uedInputTextarea:{
 					flag : false,

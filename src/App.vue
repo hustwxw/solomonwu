@@ -72,7 +72,8 @@ export default {
                 first: false,
                 second: false,
                 third: true,
-                hover : false
+                hover : false,
+                hash : '#/basic/button'
             }, {
                 name: 'Form',
                 first: false,
@@ -112,10 +113,13 @@ export default {
             this.showLeft = true;
         }
     },
-    nav(event){      
-      location.hash = event.target.getAttribute('hash') || "#/nofound";
+    nav(event){            
       var index = event.target.getAttribute('index');
       var menuData = this.menus[index];
+      if(menuData.second == true){
+        return false;
+      }
+      location.hash = event.target.getAttribute('hash') || "#/nofound";
       this.menus.forEach(function(ele,i){
         ele.hover = false;
       });
