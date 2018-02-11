@@ -99,32 +99,32 @@ export default{
 				uedButtonBasic:{
 					flag : false,
 					html : ' <button class="ued-button-basic ued-button-color1">BUTTON</button> \n <button class="ued-button-basic ued-button-color2">BUTTON</button> \n <button class="ued-button-basic ued-button-color3">BUTTON</button> \n <button class="ued-button-basic ued-button-color4">BUTTON</button> \n <button class="ued-button-basic">BUTTON</button>',
-					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n\v\v\v\v .selfcolor{ \n\v\v\v\v\v\v\v\v color:white;/*字体颜色*/ \n\v\v\v\v\v\v\v\v border:0px;/*border大小*/ \n\v\v\v\v\v\v\v\v background-color: #0486FE;/*背景颜色*/ \n\v\v\v\v }'
+					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:white;/*字体颜色*/ \n         border:0px;/*border大小*/ \n         background-color: #0486FE;/*背景颜色*/ \n     }'
 				},
 				uedButtonEmpty:{
 					flag : false,
 					html : ' <button class="ued-button-empty ued-button-color1">BUTTON</button> \n <button class="ued-button-empty ued-button-color2">BUTTON</button> \n <button class="ued-button-empty ued-button-color3">BUTTON</button> \n <button class="ued-button-empty ued-button-color4">BUTTON</button> \n <button class="ued-button-empty ">BUTTON</button>',
-					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n\v\v\v\v .selfcolor{ \n\v\v\v\v\v\v\v\v color:#0486FE;/*字体颜色*/ \n\v\v\v\v\v\v\v\v background-color: #E6F1FC;/*背景色*/ \n\v\v\v\v\v\v\v\v border: 1px solid #A3D0FD;	/*边框*/ \n\v\v\v\v }'
+					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:#0486FE;/*字体颜色*/ \n         background-color: #E6F1FC;/*背景色*/ \n         border: 1px solid #A3D0FD;	/*边框*/ \n     }'
 				},
 				uedButtonRound:{
 					flag : false,
 					html : ' <button class="ued-button-basic ued-button-round ued-button-color1">BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color2">BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color3">BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color4">BUTTON</button> \n <button class="ued-button-basic ued-button-round ">BUTTON</button>',
-					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n\v\v\v\v .selfcolor{ \n\v\v\v\v\v\v\v\v color:white;/*字体颜色*/ \n\v\v\v\v\v\v\v\v border:0px;/*border大小*/ \n\v\v\v\v\v\v\v\v background-color: #0486FE;/*背景颜色*/ \n\v\v\v\v }'
+					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:white;/*字体颜色*/ \n         border:0px;/*border大小*/ \n         background-color: #0486FE;/*背景颜色*/ \n     }'
 				},
 				uedButtonDisabledBasic:{
 					flag : false,
 					html : ' <button class="ued-button-basic ued-button-color1" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-color2" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-color3" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-color4" disabled>BUTTON</button> \n <button class="ued-button-basic" disabled>BUTTON</button>',
-					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n\v\v\v\v .selfcolor{ \n\v\v\v\v\v\v\v\v color:white;/*字体颜色*/ \n\v\v\v\v\v\v\v\v border:0px;/*border大小*/ \n\v\v\v\v\v\v\v\v background-color: #0486FE;/*背景颜色*/ \n\v\v\v\v }'
+					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:white;/*字体颜色*/ \n         border:0px;/*border大小*/ \n         background-color: #0486FE;/*背景颜色*/ \n     }'
 				},
 				uedButtonDisabledEmpty:{
 					flag : false,
 					html : ' <button class="ued-button-empty ued-button-color1" disabled>BUTTON</button> \n <button class="ued-button-empty ued-button-color2" disabled>BUTTON</button> \n <button class="ued-button-empty ued-button-color3" disabled>BUTTON</button> \n <button class="ued-button-empty ued-button-color4" disabled>BUTTON</button> \n <button class="ued-button-empty " disabled>BUTTON</button>',
-					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n\v\v\v\v .selfcolor{ \n\v\v\v\v\v\v\v\v color:#0486FE;/*字体颜色*/ \n\v\v\v\v\v\v\v\v background-color: #E6F1FC;/*背景色*/ \n\v\v\v\v\v\v\v\v border: 1px solid #A3D0FD;	/*边框*/ \n\v\v\v\v }'
+					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:#0486FE;/*字体颜色*/ \n         background-color: #E6F1FC;/*背景色*/ \n         border: 1px solid #A3D0FD;	/*边框*/ \n     }'
 				},
 				uedButtonDisabledRound:{
 					flag : false,
 					html : ' <button class="ued-button-basic ued-button-round ued-button-color1" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color2" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color3" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color4" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round " disabled>BUTTON</button>',
-					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n\v\v\v\v .selfcolor{ \n\v\v\v\v\v\v\v\v color:white;/*字体颜色*/ \n\v\v\v\v\v\v\v\v border:0px;/*border大小*/ \n\v\v\v\v\v\v\v\v background-color: #0486FE;/*背景颜色*/ \n\v\v\v\v }'
+					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:white;/*字体颜色*/ \n         border:0px;/*border大小*/ \n         background-color: #0486FE;/*背景颜色*/ \n     }'
 				}
 			}
 		};

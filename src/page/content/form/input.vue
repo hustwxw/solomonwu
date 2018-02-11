@@ -112,7 +112,7 @@ export default{
 				},
 				uedInputCompose:{
 					flag : false,
-					html : '<div class="ued-input-compose" id="ued-input-compose" onselectstart="return false"> \n\v\v\v\v <div class="ued-input-compose-tag">请选择<i></i></div> \n\v\v\v\v <input type="text" class="ued-input-basic" placeholder="请输入内容"> \n\v\v\v\v <ul class="none"> \n\v\v\v\v\v\v\v\v <li>选项一</li> \n\v\v\v\v\v\v\v\v <li>选项二</li> \n\v\v\v\v\v\v\v\v <li>选项三</li> \n\v\v\v\v </ul> \n</div>',
+					html : '<div class="ued-input-compose" id="ued-input-compose" onselectstart="return false"> \n     <div class="ued-input-compose-tag">请选择<i></i></div> \n     <input type="text" class="ued-input-basic" placeholder="请输入内容"> \n     <ul class="none"> \n         <li>选项一</li> \n         <li>选项二</li> \n         <li>选项三</li> \n     </ul> \n</div>',
 					script : function(){
 						$("#ued-input-compose .ued-input-compose-tag").on("click",function(){
 							if($(this).parent().find('ul').hasClass('none')){
@@ -127,20 +127,20 @@ export default{
 						});
 					},
 					scriptText : 
-						`示例脚本：\n $("#ued-input-compose .ued-input-compose-tag").on("click",function(){ \n\v\v\v\v if($(this).parent().find('ul').hasClass('none')){ \n\v\v\v\v\v\v\v\v $(this).parent().find('ul').removeClass('none') \n\v\v\v\v }else{ \n\v\v\v\v\v\v\v\v $(this).parent().find('ul').addClass('none') \n\v\v\v\v } \n }); \n $("#ued-input-compose li").on("click",function(){ \n\v\v\v\v $(this).parent("ul").addClass('none'); \n\v\v\v\v $("#ued-input-compose .ued-input-compose-tag").html($(this).html() + "<i></i>"); \n });`
+						`示例脚本：\n $("#ued-input-compose .ued-input-compose-tag").on("click",function(){ \n     if($(this).parent().find('ul').hasClass('none')){ \n         $(this).parent().find('ul').removeClass('none') \n     }else{ \n         $(this).parent().find('ul').addClass('none') \n     } \n }); \n $("#ued-input-compose li").on("click",function(){ \n     $(this).parent("ul").addClass('none'); \n     $("#ued-input-compose .ued-input-compose-tag").html($(this).html() + "<i></i>"); \n });`
 				},
 				uedInputComposeBg:{
 					flag : false,
-					html : '<div class="ued-input-compose ued-input-compose_bg"> \n\v\v\v\v <div class="ued-input-compose-tag">Http://</div> \n\v\v\v\v <input type="text" class="ued-input-basic" placeholder="请输入内容"> \n</div>'					
+					html : '<div class="ued-input-compose ued-input-compose_bg"> \n     <div class="ued-input-compose-tag">Http://</div> \n     <input type="text" class="ued-input-basic" placeholder="请输入内容"> \n</div>'					
 				},
 				uedInputSuccess:{
 					flag : false,
-					html : '<div class="ued-input-normal ued-input-success"> \n\v\v\v\v <input type="text" class="ued-input-basic"><i></i> \n</div>',
+					html : '<div class="ued-input-normal ued-input-success"> \n     <input type="text" class="ued-input-basic"><i></i> \n</div>',
 					scriptText : '恢复正常输入框，可以去掉ued-input-success样式类即可'
 				},
 				uedInputError:{
 					flag : false,
-					html : '<div class="ued-input-normal ued-input-error"> \n\v\v\v\v <input type="text" class="ued-input-basic"><i></i> \n</div>',
+					html : '<div class="ued-input-normal ued-input-error"> \n     <input type="text" class="ued-input-basic"><i></i> \n</div>',
 					scriptText : '恢复正常输入框，可以去掉ued-input-error样式类即可'
 				},
 				uedInputTextarea:{
