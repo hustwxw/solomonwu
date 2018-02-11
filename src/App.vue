@@ -43,7 +43,7 @@ export default {
                 second: true,
                 third: false,
                 hover : false
-            }, {
+            }/*, {
                 name: '配色 Color',
                 first: false,
                 second: false,
@@ -67,7 +67,7 @@ export default {
                 second: false,
                 third: true,
                 hover : false
-            }, {
+            }*/, {
                 name: '按钮 Button',
                 first: false,
                 second: false,

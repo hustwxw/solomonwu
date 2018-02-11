@@ -65,7 +65,7 @@ body,.el-main{
 .code{
 	border:1px solid #d5d5d5;
 	box-sizing: border-box;	
-	padding:10px;
+	padding:10px 5px;
 }
 
 .code:hover{
@@ -76,7 +76,7 @@ body,.el-main{
 	line-height: 20px;
 	font-size: 16px;
 	box-sizing: border-box;	
-	padding:10px;
+	padding:10px 5px;
 	color: #3182bd;
 }
 
