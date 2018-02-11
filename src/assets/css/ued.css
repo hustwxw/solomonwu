@@ -1,4 +1,5 @@
 
+/*input start*/
 .ued-input-basic::-webkit-input-placeholder{
 	font-size: 14px;
 	color: #909399;
@@ -165,6 +166,10 @@
 	font-size: 16px;
 }
 
+/*input end*/
+
+
+/*button start*/
 .ued-button-basic{
 	display: inline-block;
     line-height: 1;
@@ -288,6 +293,59 @@
 	opacity: 0.5 !important;
 	filter:alpha(opacity=50) !important;
 }
+
+.ued-button-text{
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.ued-button-text:hover{
+	text-decoration: none;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+.ued-button-text[disabled]{
+	opacity: 1 !important;
+	filter:alpha(opacity=100) !important;
+}
+
+.ued-button-text[disabled]{
+	cursor: not-allowed;
+}
+
+.ued-button-text.ued-button-style1{
+	font-size: 14px;
+	color: #0486FE;
+	letter-spacing: 0;
+}
+
+.ued-button-text.ued-button-style2{
+	font-size: 14px;
+	color: #27B777;
+	letter-spacing: 0;
+}
+
+.ued-button-text.ued-button-style3{
+	font-size: 14px;
+	color: #F56C6C;
+	letter-spacing: 0;
+}
+
+.ued-button-text.ued-button-style4{
+	font-size: 14px;
+	color: #606266;
+	letter-spacing: 0;
+}
+
+.ued-button-text.ued-button-style5{
+	font-size: 14px;
+	color: #D1D1D3;
+	letter-spacing: 0;
+}
+
+/*button end*/
 
 .ued-tag-basic{
 	box-sizing: border-box;	

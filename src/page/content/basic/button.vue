@@ -81,6 +81,20 @@
 				<pre v-text="map.uedButtonDisabledRound.scriptText" v-if="map.uedButtonDisabledRound.scriptText"></pre>
 			</div>
 		</div>
+		<!-- 文字按钮 -->
+		<div class="row">
+			<span class="ued-tag-basic">文字按钮</span>
+			<span v-html="map.uedButtonText.html"></span>	
+			<a href="javascript:void(0)" class="view" @click="view('uedButtonText')">示例代码</a>	
+		</div>
+		<div class="row" v-if="map.uedButtonText.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedButtonText.html"></pre>
+				<pre v-text="map.uedButtonText.scriptText" v-if="map.uedButtonText.scriptText"></pre>
+			</div>
+		</div>
 	</div>	
 </transition>
 </template>
@@ -125,6 +139,11 @@ export default{
 					flag : false,
 					html : ' <button class="ued-button-basic ued-button-round ued-button-color1" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color2" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color3" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round ued-button-color4" disabled>BUTTON</button> \n <button class="ued-button-basic ued-button-round " disabled>BUTTON</button>',
 					scriptText : 'ued-button-color1到ued-button-color4是对应四种默认颜色，如果需要自定义颜色class请按照如下规则： \n     .selfcolor{ \n         color:white;/*字体颜色*/ \n         border:0px;/*border大小*/ \n         background-color: #0486FE;/*背景颜色*/ \n     }'
+				},
+				uedButtonText:{
+					flag : false,
+					html : ' <a href="javascript:void(0)" class="ued-button-text ued-button-style1">文字按钮</a> \n <a href="javascript:void(0)" class="ued-button-text ued-button-style2">文字按钮</a> \n <a href="javascript:void(0)" class="ued-button-text ued-button-style3">文字按钮</a> \n <a href="javascript:void(0)" class="ued-button-text ued-button-style4">文字按钮</a> \n <a href="javascript:void(0)" class="ued-button-text ued-button-style5" disabled>文字按钮</a>',
+					scriptText : ''
 				}
 			}
 		};

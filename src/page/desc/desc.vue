@@ -4,8 +4,8 @@
 		<h1>UED标准组件库使用说明文档</h1>
 		<h2>1、CSS文件引用（两个必须文件）</h2>
 		<div class="box">
-			<h3>基础css库：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/css/basic.css"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/css/basic.css" target="_blank">basic.css源文件</a></h3>
-			<h3>组件css库：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/css/ued.css"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/css/ued.css" target="_blank">ued.css源文件</a></h3>
+			<h3>基础css库：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/css/basic.css"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/css/basic.css" target="_blank">下载basic.css源文件</a></h3>
+			<h3>组件css库：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/css/ued.css"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/css/ued.css" target="_blank">下载ued.css源文件</a></h3>
 		</div>
 		<h2>2、CSS命名规则</h2>
 		<div class="box">

@@ -1,6 +1,6 @@
 <template>
 	<div class="content">
-		抱歉，你的页面丢失了！
+		抱歉，页面还在开发中！
 	</div>
 </template>
 
