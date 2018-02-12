@@ -99,7 +99,8 @@ export default {
                 first: false,
                 second: false,
                 third: true,
-                hover : false
+                hover : false,
+                hash : '#/form/checkbox'
             }, {
                 name: '输入框 Input',
                 first: false,

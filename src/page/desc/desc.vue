@@ -6,6 +6,7 @@
 		<div class="box">
 			<h3>基础css库：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/css/basic.css"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/css/basic.css" target="_blank">下载basic.css源文件</a></h3>
 			<h3>组件css库：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/css/ued.css"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/css/ued.css" target="_blank">下载ued.css源文件</a></h3>
+			<h3>图片资源：&lt;link rel="stylesheet" href="https://hustwxw.github.io/solomonwu/src/assets/images.zip"&gt; <a href="https://hustwxw.github.io/solomonwu/src/assets/images.zip" target="_blank">下载images.zip图片压缩包</a></h3>
 		</div>
 		<h2>2、CSS命名规则</h2>
 		<div class="box">

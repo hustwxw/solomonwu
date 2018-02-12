@@ -270,6 +270,91 @@
 }
 /*radio end*/
 
+/*checkbox start*/
+.ued-form-checkbox{
+	display: inline-block;
+	min-width:14px;
+	width:auto;
+	height:14px;
+	position: relative;
+	cursor: pointer;	
+}
+
+.ued-form-checkbox:hover{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+.ued-form-checkbox.ued-form-checkboxcheck .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/checkbox_checked_2.png) no-repeat 0 center / 100%;
+	background:url(../images/checkbox_checked.png) no-repeat 0 center\8;
+}
+
+.ued-form-checkbox.ued-form-checkboxcheckdis .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/checkbox_checked_disabled_2.png) no-repeat 0 center / 100%;
+	background:url(../images/checkbox_checked_disabled.png) no-repeat 0 center\8;
+}
+
+.ued-form-checkbox.ued-form-checkboxuncheck .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/checkbox_unchecked_2.png) no-repeat 0 center / 100%;
+	background:url(../images/checkbox_unchecked.png) no-repeat 0 center\8;
+}
+
+.ued-form-checkbox.ued-form-checkboxuncheckdis .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/checkbox_unchecked_disabled_2.png) no-repeat 0 center / 100%;
+	background:url(../images/checkbox_unchecked_disabled.png) no-repeat 0 center\8;
+}
+
+.ued-form-checkbox input{
+	opacity: 0;
+	filter:alpha(opacity=0);
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	position: relative;
+	left:-14px;
+	top:-2px;
+}
+
+.ued-form-checkbox span{
+	font-size: 14px;
+	color: #1989FA;
+	letter-spacing: 0;
+	line-height: 14px;
+	height:14px;
+	width:auto;
+	font-weight: lighter;
+	position: relative;
+	left:-5px;
+	top:-2px;
+}
+
+.ued-form-checkbox.ued-form-checkboxuncheck span{
+	color:#606266;
+}
+
+.ued-form-checkbox.ued-form-checkboxcheckdis span,
+.ued-form-checkbox.ued-form-checkboxuncheckdis span{
+	color:#C0C4CC;
+}
+/*checkbox end*/
+
 /*button start*/
 .ued-button-basic{
 	display: inline-block;
