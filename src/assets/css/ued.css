@@ -185,6 +185,90 @@
 
 /*input end*/
 
+/*radio start*/
+.ued-form-radio{
+	display: inline-block;
+	min-width:14px;
+	width:auto;
+	height:14px;
+	position: relative;
+	cursor: pointer;	
+}
+
+.ued-form-radio:hover{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+.ued-form-radio.ued-form-radiocheck .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/radio_checked_2.png) no-repeat 0 center / 100%;
+	background:url(../images/radio_checked.png) no-repeat 0 center\8;
+}
+
+.ued-form-radio.ued-form-radiocheckdis .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/radio_checked_disabled_2.png) no-repeat 0 center / 100%;
+	background:url(../images/radio_checked_disabled.png) no-repeat 0 center\8;
+}
+
+.ued-form-radio.ued-form-radiouncheck .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/radio_unchecked_2.png) no-repeat 0 center / 100%;
+	background:url(../images/radio_unchecked.png) no-repeat 0 center\8;
+}
+
+.ued-form-radio.ued-form-radiouncheckdis .radio-bg{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	background:url(../images/radio_unchecked_disabled_2.png) no-repeat 0 center / 100%;
+	background:url(../images/radio_unchecked_disabled.png) no-repeat 0 center\8;
+}
+
+.ued-form-radio input{
+	opacity: 0;
+	filter:alpha(opacity=0);
+	width:14px;
+	height:14px;
+	cursor: pointer;
+	position: relative;
+	left:-14px;
+	top:-2px;
+}
+
+.ued-form-radio span{
+	font-size: 14px;
+	color: #1989FA;
+	letter-spacing: 0;
+	line-height: 14px;
+	height:14px;
+	width:auto;
+	font-weight: lighter;
+	position: relative;
+	left:-5px;
+	top:-2px;
+}
+
+.ued-form-radio.ued-form-radiouncheck span{
+	color:#606266;
+}
+
+.ued-form-radio.ued-form-radiocheckdis span,
+.ued-form-radio.ued-form-radiouncheckdis span{
+	color:#C0C4CC;
+}
+/*radio end*/
 
 /*button start*/
 .ued-button-basic{

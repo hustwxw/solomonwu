@@ -7,6 +7,7 @@ const Login = r => require.ensure([], () => r(require('@/page/login')), 'login_p
 const desc = r => require.ensure([], () => r(require('@/page/desc/desc')), 'desc_input');
 const nofound = r => require.ensure([], () => r(require('@/page/nofound')), 'nofound_page');
 const form_input = r => require.ensure([], () => r(require('@/page/content/form/input')), 'content_form_input');
+const form_radio = r => require.ensure([], () => r(require('@/page/content/form/radio')), 'content_form_radio');
 const basic_button = r => require.ensure([], () => r(require('@/page/content/basic/button')), 'content_basic_button');
 const basic_box = r => require.ensure([], () => r(require('@/page/content/basic/box')), 'content_basic_box');
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/form/input',
       name: 'form_input',
       component: form_input
+    },
+    {
+      path: '/form/radio',
+      name: 'form_radio',
+      component: form_radio
     },
     {
       path: '/desc/index',

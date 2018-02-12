@@ -92,7 +92,8 @@ export default {
                 first: false,
                 second: false,
                 third: true,
-                hover : false
+                hover : false,
+                hash : '#/form/radio'
             }, {
                 name: '复选框 Checkbox',
                 first: false,
