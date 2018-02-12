@@ -13,6 +13,19 @@
 				<pre v-text="map.uedInputBasic.scriptText" v-if="map.uedInputBasic.scriptText"></pre>
 			</div>
 		</div>
+		<!-- 日历输入框 -->
+		<div class="row">
+			<span class="ued-tag-basic">日历组件</span><span v-html="map.uedInputCalendar.html"></span><a href="javascript:void(0)" class="view" @click="view('uedInputCalendar')">示例代码</a>						
+		</div>
+		<div class="row" v-if="map.uedInputCalendar.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedInputCalendar.html"></pre>
+				<pre v-text="map.uedInputCalendar.scriptText" v-if="map.uedInputCalendar.scriptText"></pre>
+				<pre v-html="map.uedInputCalendar.scriptHtml" v-if="map.uedInputCalendar.scriptHtml"></pre>				
+			</div>
+		</div>
 		<!-- 禁用输入框 -->
 		<div class="row">
 			<span class="ued-tag-basic">基础用法 -- 禁用</span><span v-html="map.uedInputNoAllowed.html"></span><a href="javascript:void(0)" class="view" @click="view('uedInputNoAllowed')">示例代码</a>						
@@ -106,6 +119,12 @@ export default{
 					flag : false,
 					html : '<input type="text" class="ued-input-basic" placeholder="请输入内容">',
 				},
+				uedInputCalendar:{
+					flag : false,
+					html : '<input type="text" class="ued-input-basic" placeholder="点击出现日历" id="calendar">',
+					scriptText : `示例脚本： \n var initParam = { \n   input: $("#calendar"), \n   isDoubleMonth: true, \n   zIndex: true, \n   minDate: '1990/01/01', \n   maxDate: '2050/12/31', \n }; \n new Calendar(initParam);`,
+					scriptHtml : `脚本依赖于jquery和<a href="http://underscorejs.org/underscore-min.js" target="_blank">underscore</a>两个库文件 \n\n >> <a href="" target="_blank">Calendar脚本下载</a>`
+				},
 				uedInputNoAllowed:{
 					flag : false,
 					html : '<input type="text" class="ued-input-basic" disabled placeholder="内容" value="这里禁止输入">'
@@ -171,6 +190,16 @@ export default{
 				this.map[p].script();
 			}
 		}
+
+        var initParam = {
+            input: $("#calendar"),
+            isDoubleMonth: true,
+            zIndex: true,
+            minDate: '1990/01/01',
+            maxDate: '2050/12/31',
+        };
+
+        new eking.calendar(initParam);
 	}
 }	
 </script>
