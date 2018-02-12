@@ -123,7 +123,7 @@ export default{
 					flag : false,
 					html : '<input type="text" class="ued-input-basic" placeholder="点击出现日历" id="calendar">',
 					scriptText : `示例脚本： \n var initParam = { \n   input: $("#calendar"), \n   isDoubleMonth: true, \n   zIndex: true, \n   minDate: '1990/01/01', \n   maxDate: '2050/12/31', \n }; \n new Calendar(initParam);`,
-					scriptHtml : `脚本依赖于jquery和<a href="http://underscorejs.org/underscore-min.js" target="_blank">underscore</a>两个库文件 \n\n >> <a href="" target="_blank">Calendar脚本下载</a>`
+					scriptHtml : `脚本依赖于jquery和<a href="http://underscorejs.org/underscore-min.js" target="_blank">underscore</a>两个库文件 \n\n >> <a href="https://hustwxw.github.io/solomonwu/src/lib/calendar.js" target="_blank">Calendar脚本下载</a>`
 				},
 				uedInputNoAllowed:{
 					flag : false,
