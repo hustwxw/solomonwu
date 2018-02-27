@@ -84,7 +84,7 @@ export default{
 					    </div>`;
 			$("body").append(html);
 			setTimeout(() => {
-				// $(".ued-tips-toast").remove();
+				$(".ued-tips-toast").remove();
 			},1000);
 		});
 	}
