@@ -11,6 +11,7 @@ const form_radio = r => require.ensure([], () => r(require('@/page/content/form/
 const form_checkbox = r => require.ensure([], () => r(require('@/page/content/form/checkbox')), 'content_form_checkbox');
 const basic_button = r => require.ensure([], () => r(require('@/page/content/basic/button')), 'content_basic_button');
 const basic_box = r => require.ensure([], () => r(require('@/page/content/basic/box')), 'content_basic_box');
+const tips_toast = r => require.ensure([], () => r(require('@/page/content/tips/toast')), 'content_tips_toast');
 
 export default new Router({
   routes: [
@@ -48,6 +49,11 @@ export default new Router({
       path: '/desc/index',
       name: 'desc',
       component: desc
+    },
+    {
+      path: '/tips/toast',
+      name: 'toast',
+      component: tips_toast
     },
     {
       path: '/nofound',

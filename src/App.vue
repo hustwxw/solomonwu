@@ -108,6 +108,19 @@ export default {
                 third: true,
                 hash : '#/form/input',
                 hover : false
+            }, {
+                name: 'Tips',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '加载提示 Toast',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/tips/toast'
             }]
         }
   },
