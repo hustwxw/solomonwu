@@ -550,9 +550,10 @@
     z-index: 5000;
     width: 120px;
     min-height: 120px;
-    top: 180px;
-    left: 50%;
-    margin-left: -3.8em;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    top: 50% \0;
+    left: 50% \0;
     background: rgba(17, 17, 17, 0.7);
     text-align: center;
     border-radius: 5px;
