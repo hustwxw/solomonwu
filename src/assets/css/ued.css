@@ -621,3 +621,6 @@
 	align-items: center;
 	margin-right: 10px;
 }
+svg path,svg rect{
+	fill: #ff6700;
+}

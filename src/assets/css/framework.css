@@ -66,6 +66,8 @@ body,.el-main{
 	border:1px solid #d5d5d5;
 	box-sizing: border-box;	
 	padding:10px 5px;
+	width: 85%;
+    overflow: scroll;
 }
 
 .code:hover{
