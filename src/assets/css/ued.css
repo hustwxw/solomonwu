@@ -189,7 +189,6 @@
 /*radio start*/
 .ued-form-radio{
 	min-width:50px;
-	float: left\0;
 	display: inline-block;
 	height:14px;
 	position: relative;
@@ -198,7 +197,7 @@
 
 .ued-form-radio:hover{
 	opacity: 0.8;
-	filter:alpha(opacity=80);
+	/*filter:alpha(opacity=80);*/
 }
 
 .ued-form-radio.ued-form-radiocheck .radio-bg{
@@ -207,7 +206,7 @@
 	height:14px;
 	cursor: pointer;
 	background:url(../images/radio_checked_2.png) no-repeat 0 center / 100%;
-	background:url(../images/radio_checked.png) no-repeat 0 center\8;
+	background:url(../images/radio_checked.png) no-repeat 0 center\0;
 }
 
 .ued-form-radio.ued-form-radiocheckdis .radio-bg{
@@ -216,7 +215,7 @@
 	height:14px;
 	cursor: pointer;
 	background:url(../images/radio_checked_disabled_2.png) no-repeat 0 center / 100%;
-	background:url(../images/radio_checked_disabled.png) no-repeat 0 center\8;
+	background:url(../images/radio_checked_disabled.png) no-repeat 0 center\0;
 }
 
 .ued-form-radio.ued-form-radiouncheck .radio-bg{
@@ -225,7 +224,7 @@
 	height:14px;
 	cursor: pointer;
 	background:url(../images/radio_unchecked_2.png) no-repeat 0 center / 100%;
-	background:url(../images/radio_unchecked.png) no-repeat 0 center\8;
+	background:url(../images/radio_unchecked.png) no-repeat 0 center\0;
 }
 
 .ued-form-radio.ued-form-radiouncheckdis .radio-bg{
@@ -234,7 +233,12 @@
 	height:14px;
 	cursor: pointer;
 	background:url(../images/radio_unchecked_disabled_2.png) no-repeat 0 center / 100%;
-	background:url(../images/radio_unchecked_disabled.png) no-repeat 0 center\8;
+	background:url(../images/radio_unchecked_disabled.png) no-repeat 0 center\0;
+}
+
+.ued-form-radio.ued-form-radiouncheckdis,
+.ued-form-radio.ued-form-radiocheckdis{
+	cursor: not-allowed;
 }
 
 .ued-form-radio .radio-bg{
@@ -494,19 +498,20 @@
 	vertical-align: middle;
 	height:40px;
 	line-height: 40px;
-	text-decoration: none;	
+	text-decoration: none;
+	outline: none;	
 }
 
 .ued-button-text:hover{
 	text-decoration: none;
 	opacity: 0.8;
-	/*filter:alpha(opacity=80);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";*/
+	/*filter:alpha(opacity=80);*/
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";*/
 }
 
 .ued-button-text[disabled]{
-	opacity: 1 !important;
-	filter:alpha(opacity=100) !important;
+	/*opacity: 1 !important;
+	filter:alpha(opacity=100) !important;*/
 }
 
 .ued-button-text[disabled]{
