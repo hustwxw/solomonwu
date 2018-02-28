@@ -41,7 +41,7 @@ export default{
 			map:{
 				uedTipsToast:{
 					flag : true,
-					html : '<button class="ued-button-basic ued-button-color1" id="tosat1">点击弹出toast</button>',
+					html : '<button class="ued-button-basic ued-button-color1 m_r_20" id="tosat1">点击弹出toast（H5版本或者PC高端浏览器，仿微信体验）</button><button class="ued-button-basic ued-button-color2" id="tosat2">点击弹出toast（兼容IE低版本）</button>',
 					scriptText : '以下是toast的html代码:\n\n<div class="ued-tips-toast"> \n    <div class="ued-tips-toast-mask"></div> \n    <div class="ued-tips-toast-content"> \n        <i class="ued-tips-toast-loading ued-tips-toast-icon"></i> \n        <p class="ued-tips-toast-text">加载中</p> \n    </div> \n</div>'
 				},
 				uedTipsLoading:{
@@ -85,6 +85,19 @@ export default{
 			$("body").append(html);
 			setTimeout(() => {
 				$(".ued-tips-toast").remove();
+			},1000);
+		});
+
+		$("#tosat2").on("click",function(){
+			$(".ued-tips-loadingie").remove();
+			var html = `<div class="ued-tips-loadingie">
+							<div class="ued-tips-loading"></div>
+							<div class="ued-tips-loadingcontent"></div>
+							<p>加载中......</p>
+						</div>`;
+			$("body").append(html);
+			setTimeout(() => {
+				$(".ued-tips-loadingie").remove();
 			},1000);
 		});
 	}
