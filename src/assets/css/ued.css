@@ -43,7 +43,7 @@
 	color: #909399;
 	padding-left:15px;
 	letter-spacing: 0;
-	line-height: 14px;
+	line-height: 40px;
 	box-sizing: border-box;
 }
 
@@ -65,6 +65,7 @@
 	top:-2px;
 	left:2px;
 	cursor: pointer;
+	vertical-align: middle;
 }
 
 .ued-input-compose ul.none{
@@ -187,9 +188,9 @@
 
 /*radio start*/
 .ued-form-radio{
+	min-width:50px;
+	float: left\8;
 	display: inline-block;
-	min-width:14px;
-	width:auto;
 	height:14px;
 	position: relative;
 	cursor: pointer;	
@@ -236,15 +237,18 @@
 	background:url(../images/radio_unchecked_disabled.png) no-repeat 0 center\8;
 }
 
+.ued-form-radio .radio-bg{
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+
 .ued-form-radio input{
 	opacity: 0;
 	filter:alpha(opacity=0);
 	width:14px;
 	height:14px;
 	cursor: pointer;
-	position: relative;
-	left:-14px;
-	top:-2px;
 }
 
 .ued-form-radio span{
@@ -255,9 +259,10 @@
 	height:14px;
 	width:auto;
 	font-weight: lighter;
-	position: relative;
-	left:-5px;
-	top:-2px;
+	/*position: absolute;*/
+	display: inline-block;
+	margin-left:10px;
+	margin-right: 10px;
 }
 
 .ued-form-radio.ued-form-radiouncheck span{
@@ -385,11 +390,13 @@
 .ued-button-basic:hover{
 	opacity: 0.8;
 	filter: alpha(opacity=80);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 
 .ued-button-basic:focus,.ued-button-basic:active{
 	opacity:0.7;
 	filter: alpha(opacity=70);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
 .ued-button-basic.ued-button-round{
@@ -484,13 +491,16 @@
 .ued-button-text{
 	display: inline-block;
 	vertical-align: middle;
-	text-decoration: none;
+	height:40px;
+	line-height: 40px;
+	text-decoration: none;	
 }
 
 .ued-button-text:hover{
 	text-decoration: none;
 	opacity: 0.8;
-	filter:alpha(opacity=80);
+	/*filter:alpha(opacity=80);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";*/
 }
 
 .ued-button-text[disabled]{
