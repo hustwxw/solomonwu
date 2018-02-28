@@ -263,6 +263,7 @@
 	display: inline-block;
 	margin-left:10px;
 	margin-right: 10px;
+	vertical-align: top;
 }
 
 .ued-form-radio.ued-form-radiouncheck span{
