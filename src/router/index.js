@@ -12,6 +12,10 @@ const form_checkbox = r => require.ensure([], () => r(require('@/page/content/fo
 const basic_button = r => require.ensure([], () => r(require('@/page/content/basic/button')), 'content_basic_button');
 const basic_box = r => require.ensure([], () => r(require('@/page/content/basic/box')), 'content_basic_box');
 
+const normal_table = r => require.ensure([], () => r(require('@/page/content/table/normalTable')), 'content_table_normalTable');
+const radio_table = r => require.ensure([], () => r(require('@/page/content/table/radioTable')), 'content_table_radioTable');
+const check_table = r => require.ensure([], () => r(require('@/page/content/table/checkTable')), 'content_table_checkTable');
+
 export default new Router({
   routes: [
     {
@@ -53,6 +57,21 @@ export default new Router({
       path: '/nofound',
       name: 'nofound',
       component: nofound
+    },
+    {
+      path: '/table/normalTable',
+      name: 'normal_table',
+      component: normal_table
+    },
+    {
+      path: '/table/radioTable',
+      name: 'radio_table',
+      component: radio_table
+    },
+    {
+      path: '/table/checkTable',
+      name: 'check_table',
+      component: check_table
     }
   ]
 })

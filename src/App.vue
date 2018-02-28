@@ -108,6 +108,33 @@ export default {
                 third: true,
                 hash : '#/form/input',
                 hover : false
+            }, {
+                name: 'Table',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '普通表格 Table',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/table/normalTable'
+            }, {
+                name: '单选表格 TableRadio',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/table/radioTable'
+            }, {
+                name: '多选表格 checkTable',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/table/checkTable'
             }]
         }
   },
