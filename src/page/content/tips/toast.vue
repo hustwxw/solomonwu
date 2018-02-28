@@ -42,7 +42,7 @@ export default{
 				uedTipsToast:{
 					flag : true,
 					html : '<button class="ued-button-basic ued-button-color1 m_r_20" id="tosat1">点击弹出toast（H5版本或者PC高端浏览器，仿微信体验）</button><button class="ued-button-basic ued-button-color2" id="tosat2">点击弹出toast（兼容IE低版本）</button>',
-					scriptText : '以下是toast的html代码:\n\n<div class="ued-tips-toast"> \n    <div class="ued-tips-toast-mask"></div> \n    <div class="ued-tips-toast-content"> \n        <i class="ued-tips-toast-loading ued-tips-toast-icon"></i> \n        <p class="ued-tips-toast-text">加载中</p> \n    </div> \n</div>'
+					scriptText : '以下是按钮一toast的html代码:\n\n<div class="ued-tips-toast"> \n    <div class="ued-tips-toast-mask"></div> \n    <div class="ued-tips-toast-content"> \n        <i class="ued-tips-toast-loading ued-tips-toast-icon"></i> \n        <p class="ued-tips-toast-text">加载中</p> \n    </div> \n</div> \n\n以下是按钮二toast的html代码 \n\n<div class="ued-tips-loadingie"> \n    <div class="ued-tips-loading"></div> \n    <div class="ued-tips-loadingcontent"></div> \n    <p>加载中......</p> \n</div>'
 				},
 				uedTipsLoading:{
 					flag : false,
