@@ -183,7 +183,7 @@ export default{
 				},
 				uedInputSelect:{
 					flag : false,
-					html : '<div class="ued-input-basic ued-input-select" id="ued-input-select">\n    <span>--请选择--</span>\n    <div class="ued-input-selectarrow"><i></i>\n    </div>\n    <ul class="none"> \n         <li>选项一</li> \n         <li>选项二</li> \n         <li>选项三</li> \n    </ul> \n</div>',
+					html : '<div class="ued-input-basic ued-input-select" id="ued-input-select" onselectstart="return false">\n    <span>--请选择--</span>\n    <div class="ued-input-selectarrow"><i></i>\n    </div>\n    <ul class="none"> \n         <li>选项一</li> \n         <li>选项二</li> \n         <li>选项三</li> \n    </ul> \n</div>',
 					script : function(){
 						$("#ued-input-select .ued-input-selectarrow").on("click",function(){
 							if($(this).parent().find('ul').hasClass('none')){

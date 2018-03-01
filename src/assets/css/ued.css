@@ -171,6 +171,7 @@
 .ued-input-normal .ued-input-basic,
 .ued-input-normal .ued-input-basic:focus{
 	border:1px solid #d5d5d5;
+	transition: all .2s linear;
 }
 
 .ued-input-textarea{
