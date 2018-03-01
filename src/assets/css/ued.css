@@ -675,7 +675,7 @@
 	align-items: center;
 	margin-right: 10px;
 }
-<<<<<<< HEAD
+
 /*normal-table*/
 .ued-normal-table{
 	display: inline-block;
@@ -715,8 +715,8 @@
 .ued-normal-table tr td a{
 	word-wrap: break-word;
 	
-=======
+}
 svg path,svg rect{
 	fill: #ff6700;
->>>>>>> db9f9b9e3653e2f073a27d6bc982d033677cf823
+
 }
