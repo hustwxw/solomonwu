@@ -85,7 +85,23 @@ export default{
 							'			<td>xxxxxxxxxx</td>',
 							'		</tr>',
 							'	</tbody>',
-							'</table>']
+							'</table>',
+							'<div class="ued-pagination">',
+							'	<div class="ued-p-cover">首页</div>',
+							'	<div class="ued-p-cover">上一页</div>',
+							'	<div class="ued-p-cover-num">1</div>',
+							'	<div class="ued-p-cover-num">2</div>',
+							'	<div class="ued-p-cover-num">3</div>',
+							'	<span class="ellipsis">···</span>',
+							'	<div class="ued-p-cover-num">10</div>',
+							'	<div class="ued-p-cover">下一页</div>',
+							'	<div class="ued-p-cover">尾页</div>',
+							'	<span class="total">共126条</span>',
+							'	<div class="ued-p-input-cover">',
+							'		<span>转: </span><input type="text" name="pageNum" /><span> 页</span>',
+							'	</div>',
+							'	<div class="ued-p-cover">GO</div>',
+							'</div>']
 				}
 			}
 		};

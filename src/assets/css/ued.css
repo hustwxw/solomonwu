@@ -171,6 +171,7 @@
 .ued-input-normal .ued-input-basic,
 .ued-input-normal .ued-input-basic:focus{
 	border:1px solid #d5d5d5;
+	transition: all .2s linear;
 }
 
 .ued-input-textarea{
@@ -184,6 +185,72 @@
 	font-size: 16px;
 }
 
+.ued-input-select{
+	width:150px;
+	position: relative;
+}
+
+.ued-input-select .ued-input-selectarrow{
+	width:20%;
+	height:100%;
+	display: inline-block;
+	position: absolute;
+	right:0px;
+	text-align: center;
+	border-left:1px solid #ddd;
+	cursor: pointer;
+}
+
+.ued-input-select span{
+	width:80%;
+	height:100%;
+	display: inline-block;
+	position: absolute;
+	left:0px;
+	text-align: center;
+}
+
+.ued-input-select i{
+	display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #999999;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: relative;
+    top: -2px;
+    left: 2px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.ued-input-select ul.none{
+	display: none;
+}
+
+.ued-input-select ul{
+	display: inline-block;
+	position: absolute;
+	width:100%;
+	box-sizing: border-box;
+	height:auto;
+	min-height: 40px;
+	background-color: white;
+	top:38px;
+	left:0px;
+	border:1px solid #d5d5d5;
+}
+.ued-input-select ul li{
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	transition: all .2s linear;
+}
+.ued-input-select ul li:hover,
+.ued-input-select ul li.hover{
+	background-color: #F5F7FA;
+	color:#999;
+}
 /*input end*/
 
 /*radio start*/
@@ -716,7 +783,182 @@
 	word-wrap: break-word;
 	
 }
+
+/*radio-table*/
+.ued-radio-table{
+	display: inline-block;
+	border-collapse: collapse;
+}
+.ued-radio-table tr th{
+	background-color: #f3f3f3;
+	color: #666666;
+	height: 40px;
+	border-top: 1px solid #dddddd;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 12px;
+	
+}
+.ued-radio-table tr th:first-child{
+	border-left: 1px solid #dddddd;
+}
+.ued-radio-table tr th:last-child{
+	border-right: 1px solid #dddddd;
+}
+
+.ued-radio-table tr td{
+	position: relative;
+	box-sizing: border-box;
+	border: 1px solid #dddddd;
+	border-top: none;
+	text-align: center;
+	height: 40px;
+	font-size: 12px;
+}
+.ued-radio-table tr td>span{
+	display: block;
+	word-wrap: break-word
+}
+.ued-radio-table tr td a{
+	word-wrap: break-word;
+	
+}
+.ued-radio-table tr td .ued-form-radio{
+	min-width: 0;
+}
+
+/*checkbox-table*/
+.ued-checkbox-table{
+	display: inline-block;
+	border-collapse: collapse;
+}
+.ued-checkbox-table tr th{
+	background-color: #f3f3f3;
+	color: #666666;
+	/*height: 40px;*/
+	border-top: 1px solid #dddddd;
+	text-align: center;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	font-size: 12px;
+	
+}
+.ued-checkbox-table tr th:first-child{
+	border-left: 1px solid #dddddd;
+}
+.ued-checkbox-table tr th:last-child{
+	border-right: 1px solid #dddddd;
+}
+
+.ued-checkbox-table tr td{
+	position: relative;
+	box-sizing: border-box;
+	border: 1px solid #dddddd;
+	border-top: none;
+	text-align: center;
+	height: 40px;
+	font-size: 12px;
+}
+.ued-checkbox-table tr td>span{
+	display: block;
+	word-wrap: break-word
+}
+.ued-checkbox-table tr td a{
+	word-wrap: break-word;
+	
+}
+.ued-checkbox-table tr td .ued-form-checkbox{
+	min-width: 0;
+}
+.ued-checkbox-table tr td .ued-form-checkbox input{
+	position: absolute;
+}
 svg path,svg rect{
 	fill: #ff6700;
+
+}
+/*分页器pagination*/
+.ued-pagination{
+	width: 610px;
+	margin: 0 auto;
+	margin-top: 10px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around; 
+}
+.ued-pagination .ued-p-cover{
+	display: inline-block;
+	height: 25px;
+	min-width: 30px;
+	border: 1px solid #dcdcdc;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #999999;
+	padding: 0 10px;
+}
+.ued-pagination .ellipsis{
+	display: inline-block;
+	height: 30px;
+	min-width: 20px;
+	
+	line-height: 30px;
+	text-align: center;
+
+	font-size: 14px;
+	color: #999999;
+}
+.ued-pagination .ued-p-cover-num{
+	display: inline-block;
+	height: 25px;
+	min-width: 25px;
+	border: 1px solid #dcdcdc;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #999999;
+}
+.ued-pagination .total{
+	display: inline-block;
+	height: 25px;
+	min-width: 40px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 14px;
+	color: #999999;
+}
+.ued-pagination .ued-p-input-cover{
+	display: inline-flex;
+	width: 60px;
+	height: 25px;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #999999;
+}
+.ued-pagination .ued-p-input-cover span{
+	font-size: 14px;
+}
+.ued-pagination .ued-p-input-cover input{
+	border: none;
+	border-bottom: 1px solid #999999;
+	width: 30px;
+	height: 25px;
+	box-sizing: border-box;
+	outline: none;
+	color: #999;
+	position: relative;
+	bottom: 1px;
+	text-align: center;
+}
+.ued-pagination .ued-p-cover-num:hover,.ued-pagination .ued-p-cover:hover{
+	background: #f3374b;
+	color: #fff;
+	border: 1px solid #f3374b;
+	cursor: pointer;
 
 }
