@@ -109,17 +109,26 @@ export default {
                 hash : '#/form/input',
                 hover : false
             }, {
+<<<<<<< HEAD
                 name: 'Table',
+=======
+                name: 'Tips',
+>>>>>>> db9f9b9e3653e2f073a27d6bc982d033677cf823
                 first: false,
                 second: true,
                 third: false,
                 hover : false
             }, {
+<<<<<<< HEAD
                 name: '普通表格 Table',
+=======
+                name: '加载提示 Toast',
+>>>>>>> db9f9b9e3653e2f073a27d6bc982d033677cf823
                 first: false,
                 second: false,
                 third: true,
                 hover : false,
+<<<<<<< HEAD
                 hash : '#/table/normalTable'
             }, {
                 name: '单选表格 TableRadio',
@@ -135,6 +144,9 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/table/checkTable'
+=======
+                hash : '#/tips/toast'
+>>>>>>> db9f9b9e3653e2f073a27d6bc982d033677cf823
             }]
         }
   },

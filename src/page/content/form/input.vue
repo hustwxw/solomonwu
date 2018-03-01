@@ -26,6 +26,19 @@
 				<pre v-html="map.uedInputCalendar.scriptHtml" v-if="map.uedInputCalendar.scriptHtml"></pre>				
 			</div>
 		</div>
+		<!-- 城市输入框 -->
+		<div class="row">
+			<span class="ued-tag-basic">城市组件</span><span v-html="map.uedInputCity.html"></span><a href="javascript:void(0)" class="view" @click="view('uedInputCity')">示例代码</a>						
+		</div>
+		<div class="row" v-if="map.uedInputCity.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedInputCity.html"></pre>
+				<pre v-text="map.uedInputCity.scriptText" v-if="map.uedInputCity.scriptText"></pre>
+				<pre v-html="map.uedInputCity.scriptHtml" v-if="map.uedInputCity.scriptHtml"></pre>				
+			</div>
+		</div>
 		<!-- 禁用输入框 -->
 		<div class="row">
 			<span class="ued-tag-basic">基础用法 -- 禁用</span><span v-html="map.uedInputNoAllowed.html"></span><a href="javascript:void(0)" class="view" @click="view('uedInputNoAllowed')">示例代码</a>						
@@ -125,6 +138,12 @@ export default{
 					scriptText : `示例脚本： \n var initParam = { \n   input: $("#calendar"), \n   isDoubleMonth: true, \n   zIndex: true, \n   minDate: '1990/01/01', \n   maxDate: '2050/12/31', \n }; \n new Calendar(initParam);`,
 					scriptHtml : `脚本依赖于jquery和<a href="http://underscorejs.org/underscore-min.js" target="_blank">underscore</a>两个库文件 \n\n >> <a href="https://hustwxw.github.io/solomonwu/src/lib/calendar.js" target="_blank">Calendar脚本下载</a>`
 				},
+				uedInputCity:{
+					flag : false,
+					html : '<input type="text" class="ued-input-basic" placeholder="点击出现城市" id="city">',
+					scriptText : `示例脚本： \n var initParam = { \n   input: $("#city"), \n   isShowHot: true, \n   isShowAll: true, \n   tab: ["ABCDEF", "GHIJ", "KLMN", "PQST", "WXYZ"], \n   width: 432, \n   onSelectCity: function(data) { \n     $('#city').val(data.city + "(" + data.code + ")"); \n   }}; \n\n new Calendar(initParam);`,
+					scriptHtml : `脚本依赖于jquery和<a href="http://underscorejs.org/underscore-min.js" target="_blank">underscore</a>两个库文件 \n\n >> <a href="https://hustwxw.github.io/solomonwu/src/lib/city.js" target="_blank">city脚本下载</a>`
+				},
 				uedInputNoAllowed:{
 					flag : false,
 					html : '<input type="text" class="ued-input-basic" disabled placeholder="内容" value="这里禁止输入">'
@@ -200,6 +219,19 @@ export default{
         };
 
         new eking.calendar(initParam);
+
+        var cityParam = {
+            input: $('#city'),
+            isShowHot: true,
+            isShowAll: true,
+            tab: ["ABCDEF", "GHIJ", "KLMN", "PQST", "WXYZ"],
+            width: 432,
+            onSelectCity: function(data) {
+                $('#city').val(data.city + "(" + data.code + ")");
+            }
+        }
+
+        new eking.city(cityParam);
 	}
 }	
 </script>
