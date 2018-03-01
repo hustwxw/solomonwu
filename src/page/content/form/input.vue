@@ -13,6 +13,20 @@
 				<pre v-text="map.uedInputBasic.scriptText" v-if="map.uedInputBasic.scriptText"></pre>
 			</div>
 		</div>
+		<!-- 下拉框 -->
+		<div class="row">
+			<span class="ued-tag-basic">下拉框</span>
+			<span v-html="map.uedInputSelect.html"></span>
+			<a href="javascript:void(0)" class="view" @click="view('uedInputSelect')">示例代码</a>			
+		</div>
+		<div class="row" v-if="map.uedInputSelect.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedInputSelect.html"></pre>
+				<pre v-text="map.uedInputSelect.scriptText" v-if="map.uedInputSelect.scriptText"></pre>
+			</div>
+		</div>
 		<!-- 日历输入框 -->
 		<div class="row">
 			<span class="ued-tag-basic">日历组件</span><span v-html="map.uedInputCalendar.html"></span><a href="javascript:void(0)" class="view" @click="view('uedInputCalendar')">示例代码</a>						
@@ -98,7 +112,7 @@
 				<pre v-text="map.uedInputComposeBg.html"></pre>
 				<pre v-text="map.uedInputComposeBg.scriptText" v-if="map.uedInputComposeBg.scriptText"></pre>
 			</div>
-		</div>
+		</div>		
 		<!-- 文本域 -->
 		<div class="row">
 			<span class="ued-tag-basic">文本域</span>
@@ -166,6 +180,24 @@ export default{
 					},
 					scriptText : 
 						`示例脚本：\n $("#ued-input-compose .ued-input-compose-tag").on("click",function(){ \n     if($(this).parent().find('ul').hasClass('none')){ \n         $(this).parent().find('ul').removeClass('none') \n     }else{ \n         $(this).parent().find('ul').addClass('none') \n     } \n }); \n $("#ued-input-compose li").on("click",function(){ \n     $(this).parent("ul").addClass('none'); \n     $("#ued-input-compose .ued-input-compose-tag").html($(this).html() + "<i></i>"); \n });`
+				},
+				uedInputSelect:{
+					flag : false,
+					html : '<div class="ued-input-basic ued-input-select" id="ued-input-select">\n    <span>--请选择--</span>\n    <div class="ued-input-selectarrow"><i></i>\n    </div>\n    <ul class="none"> \n         <li>选项一</li> \n         <li>选项二</li> \n         <li>选项三</li> \n    </ul> \n</div>',
+					script : function(){
+						$("#ued-input-select .ued-input-selectarrow").on("click",function(){
+							if($(this).parent().find('ul').hasClass('none')){
+								$(this).parent().find('ul').removeClass('none')
+							}else{
+								$(this).parent().find('ul').addClass('none')
+							}
+						});
+						$("#ued-input-select li").on("click",function(){
+							$(this).parent("ul").addClass('none');
+							$("#ued-input-select span").html($(this).html());
+						});
+					},
+					scriptText : `示例脚本：\n$("#ued-input-select .ued-input-selectarrow").on("click",function(){\n    if($(this).parent().find('ul').hasClass('none')){\n        $(this).parent().find('ul').removeClass('none')\n    }else{\n        $(this).parent().find('ul').addClass('none')\n    }\n});\n$("#ued-input-select li").on("click",function(){\n    $(this).parent("ul").addClass('none');\n    $("#ued-input-select span").html($(this).html());\n});`
 				},
 				uedInputComposeBg:{
 					flag : false,

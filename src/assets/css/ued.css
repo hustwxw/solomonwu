@@ -184,6 +184,72 @@
 	font-size: 16px;
 }
 
+.ued-input-select{
+	width:150px;
+	position: relative;
+}
+
+.ued-input-select .ued-input-selectarrow{
+	width:20%;
+	height:100%;
+	display: inline-block;
+	position: absolute;
+	right:0px;
+	text-align: center;
+	border-left:1px solid #ddd;
+	cursor: pointer;
+}
+
+.ued-input-select span{
+	width:80%;
+	height:100%;
+	display: inline-block;
+	position: absolute;
+	left:0px;
+	text-align: center;
+}
+
+.ued-input-select i{
+	display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #999999;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: relative;
+    top: -2px;
+    left: 2px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.ued-input-select ul.none{
+	display: none;
+}
+
+.ued-input-select ul{
+	display: inline-block;
+	position: absolute;
+	width:100%;
+	box-sizing: border-box;
+	height:auto;
+	min-height: 40px;
+	background-color: white;
+	top:38px;
+	left:0px;
+	border:1px solid #d5d5d5;
+}
+.ued-input-select ul li{
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	transition: all .2s linear;
+}
+.ued-input-select ul li:hover,
+.ued-input-select ul li.hover{
+	background-color: #F5F7FA;
+	color:#999;
+}
 /*input end*/
 
 /*radio start*/
