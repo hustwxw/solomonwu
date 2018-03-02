@@ -426,11 +426,11 @@ var City = (function() {
 
                 // console.log(_this.hotData)
 
-                var html = eking.template.getHtml(tmpl, {
+                var html = getHtml(tmpl, {
                     data: cityPanel
                 });
 
-                var hotHtml = eking.template.getHtml(hotTmpl, {
+                var hotHtml = getHtml(hotTmpl, {
                     data: _this.hotData
                 });
 
@@ -458,7 +458,7 @@ var City = (function() {
                             '</div>'
                         ].join("");
 
-                        var internationHtml = eking.template.getHtml(internationTmpl, {
+                        var internationHtml = getHtml(internationTmpl, {
                             data: i18n
                         })
                         _this.city_selector.find(".city_list>.city_area:last").after(internationHtml);
@@ -507,7 +507,7 @@ var City = (function() {
                 html = "<li class='_city_selector'><span class='_city_selector nonedata'>抱歉没有找到数据" + (key.length > 6 ? '' : ("'" + key + "'")) + "</span></li>";
             } else {
                 //找到
-                html = eking.template.getHtml(tmpl, {
+                html = getHtml(tmpl, {
                     data: result
                 });
             }
