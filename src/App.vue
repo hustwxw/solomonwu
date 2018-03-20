@@ -31,6 +31,13 @@ export default {
                 third: false,
                 hash : '#/desc/index',
                 hover : true
+            },{
+                name: 'H5页面',
+                first: true,
+                second: false,
+                third: false,
+                hash : '#/H5/static',
+                hover : false
             }, {
                 name: '组件',
                 first: true,

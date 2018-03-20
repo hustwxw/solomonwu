@@ -1,0 +1,129 @@
+.top_nav{
+	background-color: white;
+	display: inline-flex;
+	width:100%;
+	height:1.25rem;
+	border-bottom: 1px solid #f13721;
+	box-sizing: border-box;
+	padding:0rem 5.3%;
+	position: relative;
+	justify-content: space-between;
+}
+
+.top_nav .item{
+	display: inline-flex;
+	width:20%;
+	height:100%;
+	justify-content: center;
+	align-items: center;
+	font-size: .5rem;
+	color:#757575;
+	margin-right: 5%;
+}
+
+.top_nav .item.last{
+	margin-right: 0px;
+}
+
+.top_nav .item.hover{
+	color:#f13721;
+}
+
+.top_nav .progress{
+	display: inline-flex;
+	background-color: #f13721;
+	width:14%;
+	height:.1rem;
+	position: absolute;
+	left:5.3%;
+	top:1.15rem;
+	transition: all .3s linear;
+}
+
+.cnt{
+	box-sizing: border-box;
+	padding:0rem 5.3%;
+	height: auto;
+	min-height: 10rem;
+}
+
+.cnt .ball{
+	display: inline-flex;
+	width: 100%;
+	height:4.3rem;
+	background:url(../images/ball.png) no-repeat center center / 33%;
+}
+
+.cnt .ball span{
+	display: inline-flex;
+	width: 100%;
+	height:90%;
+	justify-content: center;
+	align-items: center;
+	font-size: .7316rem;
+}
+
+.cnt .ball span i{
+	font-size: .3rem;
+	position: relative;
+	top:.1rem;
+	left:.05rem;
+}
+
+.cnt .list{
+	display: inline-flex;
+	width:100%;
+	height:auto;
+	min-height: 1rem;
+	position: relative;
+	top:-0.5rem;
+	flex-direction: column;
+}
+
+.cnt .list .item{
+	display: inline-flex;
+	width:100%;
+	height:1.3rem;
+	position: relative;
+	align-items: center;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.cnt .list .item .bar{
+	display: inline-flex;
+	height: .5rem;
+	width:2px;
+	background-color: #f2432e;
+	left: 0px;
+	position:absolute;
+}
+
+.cnt .list .item .word{
+	display: inline-flex;
+	padding-left:.32rem;
+	justify-content: center;
+	align-items: center;
+	color:#353535;
+	font-size: .4rem;
+}
+
+.cnt .list .item .word.red{
+	color:#f13721;
+}
+
+.cnt .list .item .jpg,
+.cnt .list .item .pdf{
+	display: inline-flex;
+	width:.58rem;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+}
+
+.cnt .list .item .jpg{
+	background:url(../images/jpg.png) no-repeat center center / 100%;
+}
+
+.cnt .list .item .pdf{
+	background:url(../images/pdf.png) no-repeat center center / 100%;
+}

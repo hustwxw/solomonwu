@@ -1,0 +1,81 @@
+body,html{
+	height:100%;
+	overflow-y: hidden;
+}
+
+.cnt{
+	width: auto;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 0.5rem;
+	padding-left: 0.75rem;
+	padding-right: 0.88rem;
+}
+
+.type{
+	min-height: 0.8rem;
+	height:auto;
+	width:100%;
+	font-size: 0.3rem;
+	display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 0.48rem;
+}
+
+.type span:first-child{
+	width: 21.875%;
+	height:0.8rem;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.type .select{
+	display: inline-flex;
+	width:70%;
+	border:1px solid #dbdbdb;
+	padding-left: 0.27rem;
+	align-items: center;
+	background: url(../images/arrow_down.png) no-repeat 96% center / 8%;
+}
+
+.type select{
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	width: 75%;
+	height:100%;
+}
+
+.type textarea{
+	border:1px solid #dbdbdb;
+	display: inline-flex;
+	width:73%;
+	height: 5.53rem;
+	padding:0.3rem;
+	box-sizing: border-box;
+}
+
+.type button:active{
+	opacity: 0.8;
+}
+
+.type button{
+	display: inline-flex;
+    width: 2.7rem;
+    height: 0.9rem;
+    background: url(../images/petotion_btn.png) no-repeat center center / 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    position: absolute;
+    right: 0.46rem;
+    font-size: 0.4rem;
+    letter-spacing: 1px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 27%;
+}

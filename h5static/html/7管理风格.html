@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<title>7管理风格</title>
+	<link rel="stylesheet" href="../style/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../style/basic.css">
+	<link rel="stylesheet" href="../style/swiper.min.css">
+	<link rel="stylesheet" href="../style/common.css">
+	<link rel="stylesheet" href="../style/index.css">
+	<link rel="stylesheet" href="../style/manage.css">
+	<script src="../js/lib/lib.js"></script>
+</head>
+<body>
+	<div class="info">
+		<div class="date">
+			<i></i>
+			<span>胡世荣</span>
+		</div>
+		<button class="petotion_btn">创新型</button>
+	</div>
+	<div class="radar">
+		
+	</div>
+	<div class="desc">
+		<div class="cnt">
+			<p>
+				特征：<br/>鼓励、辅导和激励下属提升能力，完成工作目标。
+				<br/>
+				<br/>
+				积极特性：
+				<br/>
+				将个人目标与组织目标相结合，既注重工作任务的推进和指导，又关注下属的不同成长需要，可针对性地利用工作任务培养和发展下属，并和下属间建立较高的信任关系。
+				<br/>
+				<br/>
+				可能存在的弱点：
+				<br/>
+				面对复杂的商业环境或者人员问题可能会稍显犹豫。
+			</p>
+			<div class="cadreTitle">
+				<span class="ml_20">|</span>
+				<span class="ml_30">管理风格解读</span>
+			</div>
+		</div>
+	</div>
+	<script>
+		(function(){
+
+			var option = {
+			    radar: {
+			        name: {
+			            textStyle: {
+			                color: '#333333',
+			                backgroundColor: '#fff',
+			                borderRadius: 3,
+			                padding: [3, 5]
+			           }
+			        },
+			        indicator: [
+			           { name: '模糊决策', max: 10.0, color:"#333333"},
+			           { name: '卓越执行', max: 10.0, color:"#333333"},
+			           { name: '驱动变革', max: 10.0, color:"#333333"},
+			           { name: '发展人才', max: 10.0, color:"#333333"},
+			           { name: '赢得信任', max: 10.0, color:"#333333"}
+			        ],
+			        radius:"70%",
+			        nameGap:8,
+			        name:{
+			        	formatter:function(ele){
+			        		var map = {
+			        			'模糊决策':2.4,
+			        			'卓越执行':5.9,
+			        			'驱动变革':3.5,
+			        			'发展人才':7.4,
+			        			'赢得信任':5.3,
+			        		};
+			        		return '{a|'+ele+'}\n{b|'+map[ele]+'}'
+			        	},
+			        	rich:{
+			        		a: {
+					            color: '#333333',
+					            fontSize: 14,
+					            lineHeight: 20,
+					        },
+					        b: {
+					            color: '#333333',
+					            lineHeight: 20,
+					            align: 'center',
+					            fontSize: 16,
+					            fontFamily: 'number'
+					        }
+			        	}
+			        }
+			    },
+			    series: [{
+			        symbolSize : 5,
+			        type: 'radar',
+			        // areaStyle: {normal: {}},
+			        data : [
+			            {
+			                value : [2.4, 5.9, 3.5, 7.4, 5.3],
+			                name : '数据'
+			            }
+			        ],
+		            areaStyle: {
+		                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+		                    // 0% 处的颜色   
+		                    offset: 0,
+		                    color: '#fbb098'
+		                }, {
+		                    // 100% 处的颜色
+		                    offset: 1,
+		                    color: '#f34129'
+		                }], false)
+		            },
+		            lineStyle:{
+		            	color: "#f23922",
+		            }
+			    }]
+			};
+			var echart = echarts.init($(".radar").get(0));
+			echart.setOption(option);
+
+		})()
+	</script>
+</body>
+</html>

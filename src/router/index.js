@@ -6,6 +6,10 @@ Vue.use(Router)
 const Login = r => require.ensure([], () => r(require('@/page/login')), 'login_page');
 const desc = r => require.ensure([], () => r(require('@/page/desc/desc')), 'desc_input');
 const nofound = r => require.ensure([], () => r(require('@/page/nofound')), 'nofound_page');
+
+const h5static = r => require.ensure([], () => r(require('@/page/content/H5/static')), 'h5static');
+
+
 const form_input = r => require.ensure([], () => r(require('@/page/content/form/input')), 'content_form_input');
 const form_radio = r => require.ensure([], () => r(require('@/page/content/form/radio')), 'content_form_radio');
 const form_checkbox = r => require.ensure([], () => r(require('@/page/content/form/checkbox')), 'content_form_checkbox');
@@ -63,6 +67,11 @@ export default new Router({
       path: '/nofound',
       name: 'nofound',
       component: nofound
+    },
+    {
+      path: '/H5/static',
+      name: 'H5static',
+      component: h5static
     },
     {
       path: '/table/normalTable',
