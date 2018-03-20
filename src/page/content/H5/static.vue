@@ -5,6 +5,7 @@
 		<div class="wrap">
 			<a href="https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）</a>
 			<a href="https://hustwxw.github.io/solomonwu/h5static/html/左滑删除.html" target="_blank">左滑删除（基于swiper）</a>
+			<a href="http://www.swiper.com.cn/demo/index.html">轮播图Demo（swiper）</a>
 		</div>
 	</div>	
 </transition>
