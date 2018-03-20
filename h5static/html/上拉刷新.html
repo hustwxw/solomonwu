@@ -32,6 +32,7 @@
 
 		        	// 切换加载状态
 		        	$(".more i").addClass("loading");
+		        	$(".more span").html("数据加载中...");
 
 		        	setTimeout(function(){
 		        		// 模拟加载十条数据
@@ -45,6 +46,7 @@
 
 			        		// 切换正常状态
 		        			$(".more i").removeClass("loading");
+		        			$(".more span").html("滑动查看更多");
 
 			        	},0);
 		        	},1000);
