@@ -4,6 +4,7 @@
 		<p class="title">以下页面均是静态页面的效果</p>
 		<div class="wrap">
 			<a href="https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）</a>
+			<a href="https://hustwxw.github.io/solomonwu/h5static/html/左滑删除.html" target="_blank">左滑删除（基于swiper）</a>
 		</div>
 	</div>	
 </transition>
