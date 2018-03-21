@@ -3,9 +3,14 @@
 	<div class="content">
 		<p class="title">以下页面均是静态页面的效果</p>
 		<div class="wrap">
-			<a href="https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）</a>
-			<a href="https://hustwxw.github.io/solomonwu/h5static/html/左滑删除.html" target="_blank">左滑删除（基于swiper）</a>
+			<a href="https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）demo</a>
+			<a href="https://hustwxw.github.io/solomonwu/h5static/html/左滑删除.html" target="_blank">左滑删除（基于swiper）demo</a>
 			<a href="http://www.swiper.com.cn/demo/index.html">轮播图Demo（swiper）</a>
+			<a href="https://hustwxw.github.io/solomonwu/h5static/images/AirlineIcon.zip">各种航司logo</a>
+		</div>
+		<div class="wrap m_t_10" v-if="chrome">
+			<a href="view-source:https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）source</a>
+			<a href="view-source:https://hustwxw.github.io/solomonwu/h5static/html/左滑删除.html" target="_blank">左滑删除（基于swiper）source</a>
 		</div>
 	</div>	
 </transition>
@@ -21,6 +26,7 @@ export default{
 	name: 'basicBox',
 	data(){
 		return {
+			chrome : navigator.userAgent.toLocaleLowerCase().indexOf("chrome") > -1
 		};
 	},
 	methods:{
@@ -66,5 +72,8 @@ export default{
 	text-decoration: none;
 	align-items: center;
 	margin-right: 10px;
+	border:1px solid #666666;
+	padding:10px;
+	box-sizing: border-box;
 }
 </style>
