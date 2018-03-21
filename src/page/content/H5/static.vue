@@ -26,7 +26,8 @@ export default{
 	name: 'basicBox',
 	data(){
 		return {
-			chrome : navigator.userAgent.toLocaleLowerCase().indexOf("chrome") > -1
+			// chrome : navigator.userAgent.toLocaleLowerCase().indexOf("chrome") > -1
+			chrome : false
 		};
 	},
 	methods:{
