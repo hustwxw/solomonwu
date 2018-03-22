@@ -13,11 +13,11 @@ var head = `<!DOCTYPE html>
 	}
 	.wrap>.item{
 		display: inline-flex;
-		width:9%;
+		width:32px;
 		box-sizing: border-box;
 		height:50px;
 		flex-direction: column;
-		margin-right:0.1%;
+		margin-right:5px;
 	}
 	.wrap>.item>img{
 		display: inline-flex;
