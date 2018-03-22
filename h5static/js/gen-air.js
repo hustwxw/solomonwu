@@ -9,24 +9,25 @@ var head = `<!DOCTYPE html>
 	.wrap{
 		display: inline-flex;
 		flex-wrap: wrap;
+		justify-content:space-between;
 	}
 	.wrap>.item{
 		display: inline-flex;
-		width:32px;
+		width:9%;
 		box-sizing: border-box;
 		height:50px;
 		flex-direction: column;
-		margin-right: 10px;
+		margin-right:0.1%;
 	}
 	.wrap>.item>img{
 		display: inline-flex;
-		width:32px;
+		width:100%;
 		height:32px;		
 		border:1px solid #ddd;
 	}
 	.wrap>.item>span{
 		display: inline-flex;
-		width:32px;
+		width:100%;
 		box-sizing: border-box;
 		height:18px;
 		justify-content: center;
@@ -35,9 +36,9 @@ var head = `<!DOCTYPE html>
 	}
 	</style>
 </head>
-<body>`;
-var temp = '<div class="wrap"><div class="item"><img src="{path}"><span>{name}</span></div></div>';
-var footer = '</body></html>';
+<body><div class="wrap">`;
+var temp = '<div class="item"><img src="{path}"><span>{name}</span></div>';
+var footer = '</div></body></html>';
 var result = [];
 fs.readdir("../images/AirlineIcon", function(err, files) {
 	files.forEach(function(ele) {
