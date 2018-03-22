@@ -37,8 +37,18 @@ var head = `<!DOCTYPE html>
 	</style>
 </head>
 <body><div class="wrap">`;
-var temp = '<div class="item"><img src="{path}"><span>{name}</span></div>';
-var footer = '</div></body></html>';
+var temp = '<div class="item"><img data-src="{path}"><span>{name}</span></div>';
+var footer = `</div>
+	<script src="../js/lib/lib.js"></script>
+	<script>
+		$("img").each(function(i,ele){
+			setTimeout(function(){
+				var src = $(ele).data("src");
+				$(ele).attr("src",src);
+			},i*30)
+		});
+	</script>
+	</body></html>`;
 var result = [];
 fs.readdir("../images/AirlineIcon", function(err, files) {
 	files.forEach(function(ele) {
