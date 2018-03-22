@@ -9,7 +9,7 @@ var head = `<!DOCTYPE html>
 	.wrap{
 		display: inline-flex;
 		flex-wrap: wrap;
-		justify-content:space-between;
+		justify-content:flex-start;
 	}
 	.wrap>.item{
 		display: inline-flex;
@@ -17,7 +17,7 @@ var head = `<!DOCTYPE html>
 		box-sizing: border-box;
 		height:50px;
 		flex-direction: column;
-		margin-right:5px;
+		margin-right:6px;
 	}
 	.wrap>.item>img{
 		display: inline-flex;
@@ -42,8 +42,10 @@ var footer = '</div></body></html>';
 var result = [];
 fs.readdir("../images/AirlineIcon", function(err, files) {
 	files.forEach(function(ele) {
-		var path = "../images/AirlineIcon/" + ele;
-		result.push(temp.replace("{path}", path).replace("{name}", ele.split(".")[0]));
+		if (ele.indexOf("png") > -1) {
+			var path = "../images/AirlineIcon/" + ele;
+			result.push(temp.replace("{path}", path).replace("{name}", ele.split(".")[0]));
+		}
 	});
 });
 
