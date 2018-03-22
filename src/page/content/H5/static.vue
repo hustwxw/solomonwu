@@ -6,7 +6,8 @@
 			<a href="https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）demo</a>
 			<a href="https://hustwxw.github.io/solomonwu/h5static/html/左滑删除.html" target="_blank">左滑删除（基于swiper）demo</a>
 			<a href="http://www.swiper.com.cn/demo/index.html">轮播图Demo（swiper）</a>
-			<a href="https://hustwxw.github.io/solomonwu/h5static/images/AirlineIcon.zip">各种航司logo</a>
+			<a href="https://hustwxw.github.io/solomonwu/h5static/images/AirlineIcon.zip">各种航司logo(Zip)</a>
+			<a href="https://hustwxw.github.io/solomonwu/h5static/html/airs.html">各种航司logo</a>
 		</div>
 		<div class="wrap m_t_10" v-if="chrome">
 			<a href="view-source:https://hustwxw.github.io/solomonwu/h5static/html/上拉刷新.html" target="_blank">上拉刷新（基于iscroll5）source</a>
