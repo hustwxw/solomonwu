@@ -39,7 +39,7 @@ var head = `<!DOCTYPE html>
 <body><div class="wrap">`;
 var temp = '<div class="item"><img data-src="{path}"><span>{name}</span></div>';
 var footer = `</div>
-	<script src="../js/lib/lib.js"></script>
+	<script src="../js/lib/jquery1.11.3.min.js"></script>
 	<script>
 		$("img").each(function(i,ele){
 			setTimeout(function(){
