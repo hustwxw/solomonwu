@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>集团BIM首页</title>
+	<link rel="stylesheet" href="../style/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../style/swiper.min.css">
+	<link rel="stylesheet" href="../style/basic.css">
+	<link rel="stylesheet" type="text/css" href="../style/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" href="../style/index-pc.css">
+	<script>
+	(function(doc, win) {
+	    var docEl = doc.documentElement,
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	        recalc = function() {
+	            var clientWidth = docEl.clientWidth;
+	            if (!clientWidth) return;
+	            docEl.style.fontSize = clientWidth / 19.2 + 'px';
+	            window.FONTSIZE = clientWidth / 19.2;
+	        };
+	    if (!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
+	<script src="../script/lib/jquery1.11.3.min.js"></script>
+	<script src="../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>	
+	<script src="../script/lib/echarts.min.js"></script>	
+</head>
+<body>
+	<div class="top_wrap">
+		<div class="logo"></div>
+		<div class="navs">
+			<div class="nav hover"><span>首页</span></div>
+			<div class="nav"><span>三核六率</span></div>
+			<div class="nav"><span>产业动态</span></div>
+			<div class="nav"><span>集团资源</span></div>
+			<div class="nav"><span>合规风险</span></div>
+			<div class="nav"><span>运营基础</span></div>
+			<div class="nav"><span>社会责任</span></div>
+			<div class="nav"><span>品牌舆论</span></div>
+		</div>
+		<div class="top_right_wrap">
+			<div class="report">专题报告</div>
+			<div class="markfive"></div>
+			<div class="input">
+				<input type="text" placeholder="搜索指标">
+				<div class="mag"></div>
+			</div>
+			<div class="head"></div>
+			<div class="name">李伟李李李</div>
+			<div class="arrow"></div>
+		</div>
+	</div>
+	<div class="content_wrap">
+		<div class="left">
+			<div class="block">
+				<p>
+					<i class="gongwen"></i>
+					<span class="name">公文</span>
+					<span class="more">
+						More<i></i>
+					</span>
+				</p>	
+				<div class="msgs">
+					<div class="msg">
+						<span>1、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>2、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>3、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>4、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>5、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>6、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<p>
+					<i class="duban"></i>
+					<span class="name">督办</span>
+					<span class="more">
+						More<i></i>
+					</span>
+				</p>	
+				<div class="msgs">
+					<div class="msg">
+						<span>1、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>2、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>3、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+				</div>			
+			</div>
+			<div class="block">
+				<p>
+					<i class="wenjian"></i>
+					<span class="name">文件</span>
+					<span class="more">
+						More<i></i>
+					</span>
+				</p>	
+				<div class="msgs">
+					<div class="msg">
+						<span>1、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>2、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>3、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+				</div>			
+			</div>
+			<div class="block">
+				<p>
+					<i class="mijian"></i>
+					<span class="name">密件</span>
+					<span class="more">
+						More<i></i>
+					</span>
+				</p>	
+				<div class="msgs">
+					<div class="msg">
+						<span>1、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>2、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+					<div class="msg">
+						<span>3、关于易建科技某某部7月签证费的预算申请。 </span>
+						<span>2018/08/08</span>
+					</div>
+				</div>			
+			</div>
+			<div class="block nav">
+				<div class="item">
+					<i></i>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件
+				</div>
+				<div class="item">
+					<i></i>规章制度
+				</div>
+				<div class="item">
+					<i></i>今日海航
+				</div>
+				<div class="item">
+					<i></i>人力平台
+				</div>
+				<div class="item">
+					<i></i>党建在线
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="block">
+				<p>
+					<i class="zhengti"></i>
+					<span class="name">整体情况</span>
+				</p>
+				<div class="boxes">
+					<div class="box">
+						<p>
+							<span>收入</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="chart_1" id="income"></div>
+						<div class="desc_1">
+							<span>2,148.12<i>亿元</i></span>
+							<span>本月预算 : <i>1289.12亿元</i></span>
+						</div>
+					</div>
+					<div class="box">
+						<p>
+							<span>人均人工收入</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="desc_3">
+							2.41<i>万元</i>
+						</div>
+						<div class="desc_4">
+							<div class="item">人工成本</div>
+							<div class="item">人员数量</div>
+							<div class="item">12,000万元</div>							
+							<div class="item">3,214</div>
+						</div>
+					</div>
+					<div class="box">
+						<p>
+							<span>生产经营收入</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="desc_3">
+							2.41<i>亿元</i>
+						</div>
+						<div class="desc_4">
+							<div class="item">本日收入</div>
+							<div class="item">本月累计</div>
+							<div class="item">12,000亿元</div>							
+							<div class="item">3,214亿元</div>
+						</div>
+					</div>
+					<div class="box">
+						<p>
+							<span>收入</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="chart_1" id="profit"></div>
+						<div class="desc_1">
+							<span>2,148.12<i>亿元</i></span>
+							<span>本月预算 : <i>1289.12亿元</i></span>
+						</div>
+					</div>
+					<div class="box">
+						<p>
+							<span>人均利润</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="desc_3">
+							2.41<i>万元</i>
+						</div>
+						<div class="desc_4">
+							<div class="item">净利润</div>
+							<div class="item">人员数量</div>
+							<div class="item">12,000万元</div>							
+							<div class="item">3,214</div>
+						</div>
+					</div>
+					<div class="box">
+						<p>
+							<span>净资产收益率</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="chart_2" id="roe"></div>						
+					</div>
+					<div class="box">
+						<p>
+							<span>资产负债率</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="chart_3" id="debt"></div>
+						<div class="desc_2">
+							<span>资产:1242.22亿元</span>
+							<span>负债:1234.22亿元</span>
+						</div>
+					</div>
+					<div class="box">
+						<p>
+							<span>资产周转率</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="chart_2" id="turnover"></div>						
+					</div>
+					<div class="box">
+						<p>
+							<span>可用头寸</span>
+							<span>2018/03/01</span>
+						</p>
+						<div class="chart_1" id="cash"></div>	
+						<div class="desc_1">
+							<span>2,148.12<i>亿元</i></span>
+							<span>可用占比 : <i>1289.12亿元</i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<p>
+					<i class="shizhi"></i>
+					<span class="name">市值情况</span>
+				</p>
+				<div class="items">
+					<div class="item">
+						<div class="row">
+							<span>上市公司</span>
+							<span>2018-01-01</span>
+						</div>
+						<div class="row row_single">
+							<span>33<i>家</i></span>
+						</div>
+						<div class="row row_wrap">
+							<span><i>A股：</i><i>10家</i></span>
+							<span><i>B股：</i><i>10家</i></span>
+							<span><i>港股：</i><i>10家</i></span>
+							<span><i>新三板：</i><i>10家</i></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<span>总市值</span>
+							<span>2018-01-01</span>
+						</div>
+						<div class="row">
+							<span>123.123<i>亿</i><em class="down"></em></span>
+							<span>3312.23<i>亿</i><em class="up"></em></span>
+						</div>
+						<div class="row row_wrap">
+							<span><i>A股：</i><i>10亿</i></span>
+							<span><i>B股：</i><i>10亿</i></span>
+							<span><i>港股：</i><i>10亿</i></span>
+							<span><i>新三板：</i><i>10亿</i></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<span>持有市值</span>
+							<span>2018-01-01</span>
+						</div>
+						<div class="row">
+							<span>123.123<i>亿</i><em class="down"></em></span>
+							<span>3312.23<i>亿</i><em class="up"></em></span>
+						</div>
+						<div class="row row_wrap">
+							<span><i>A股：</i><i>10亿</i></span>
+							<span><i>B股：</i><i>10亿</i></span>
+							<span><i>港股：</i><i>10亿</i></span>
+							<span><i>新三板：</i><i>10亿</i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<p>
+					<i class="yichang"></i>
+					<span class="name">异常波动</span>
+				</p>
+				<div class="cnt">
+					<div class="table">
+						<div class="item head">
+							<span>机构</span>
+							<span>指标运营情况</span>
+						</div>
+						<div class="hid">
+							<div class="tbody">
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+								<div class="item">
+									<span>海航集团</span>
+									<span>2018/02</span>
+									<span>资产负债率</span>
+									<span>：  48%</span>
+									<span>未达标</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function adapter(){
+		var isChrome = navigator.userAgent.toLowerCase().indexOf("chrome")>-1;
+		var isLt1200 = $(window).width() < 1200;
+		if(isChrome && isLt1200){
+			$("html,body").addClass("minchrome");
+		}
+	}
+
+	adapter();
+
+	$(window).on("resize",adapter);
+
+
+	// 模拟滚动条
+	$(".msgs").mCustomScrollbar({
+		set_height: "1.5rem",
+		mouseWheel: true
+	});
+	setTimeout(function(){
+		$(".mCSB_container").css({
+			"top" : "0px"
+		});
+	},0);
+</script>
+<script src="../script/index-pc.js"></script>
+</html>
