@@ -9,6 +9,8 @@ const nofound = r => require.ensure([], () => r(require('@/page/nofound')), 'nof
 
 const h5static = r => require.ensure([], () => r(require('@/page/content/H5/static')), 'h5static');
 
+const refreshcss = r => require.ensure([], () => r(require('@/page/content/refreshcss/index')), 'refreshcss_index');
+
 
 const form_input = r => require.ensure([], () => r(require('@/page/content/form/input')), 'content_form_input');
 const form_radio = r => require.ensure([], () => r(require('@/page/content/form/radio')), 'content_form_radio');
@@ -21,72 +23,68 @@ const normal_table = r => require.ensure([], () => r(require('@/page/content/tab
 const radio_table = r => require.ensure([], () => r(require('@/page/content/table/radioTable')), 'content_table_radioTable');
 const check_table = r => require.ensure([], () => r(require('@/page/content/table/checkTable')), 'content_table_checkTable');
 
+const svg_animate = r => require.ensure([], () => r(require('@/page/content/svg/animate')), 'content_svg_animate');
+
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/basic/button',
-      name: 'basic_button',
-      component: basic_button
-    },
-    {
-      path: '/basic/box',
-      name: 'basic_box',
-      component: basic_box
-    },
-    {
-      path: '/form/input',
-      name: 'form_input',
-      component: form_input
-    },
-    {
-      path: '/form/radio',
-      name: 'form_radio',
-      component: form_radio
-    },
-    {
-      path: '/form/checkbox',
-      name: 'form_checkbox',
-      component: form_checkbox
-    },
-    {
-      path: '/desc/index',
-      name: 'desc',
-      component: desc
-    },
-    {
-      path: '/tips/toast',
-      name: 'toast',
-      component: tips_toast
-    },
-    {
-      path: '/nofound',
-      name: 'nofound',
-      component: nofound
-    },
-    {
-      path: '/H5/static',
-      name: 'H5static',
-      component: h5static
-    },
-    {
-      path: '/table/normalTable',
-      name: 'normal_table',
-      component: normal_table
-    },
-    {
-      path: '/table/radioTable',
-      name: 'radio_table',
-      component: radio_table
-    },
-    {
-      path: '/table/checkTable',
-      name: 'check_table',
-      component: check_table
-    }
-  ]
+  routes: [{
+    path: '/',
+    name: 'login',
+    component: Login
+  }, {
+    path: '/basic/button',
+    name: 'basic_button',
+    component: basic_button
+  }, {
+    path: '/basic/box',
+    name: 'basic_box',
+    component: basic_box
+  }, {
+    path: '/form/input',
+    name: 'form_input',
+    component: form_input
+  }, {
+    path: '/form/radio',
+    name: 'form_radio',
+    component: form_radio
+  }, {
+    path: '/form/checkbox',
+    name: 'form_checkbox',
+    component: form_checkbox
+  }, {
+    path: '/desc/index',
+    name: 'desc',
+    component: desc
+  }, {
+    path: '/tips/toast',
+    name: 'toast',
+    component: tips_toast
+  }, {
+    path: '/nofound',
+    name: 'nofound',
+    component: nofound
+  }, {
+    path: '/H5/static',
+    name: 'H5static',
+    component: h5static
+  }, {
+    path: '/table/normalTable',
+    name: 'normal_table',
+    component: normal_table
+  }, {
+    path: '/table/radioTable',
+    name: 'radio_table',
+    component: radio_table
+  }, {
+    path: '/table/checkTable',
+    name: 'check_table',
+    component: check_table
+  }, {
+    path: '/svg/animate',
+    name: 'svg_animate',
+    component: svg_animate
+  }, {
+    path: '/RefreshCss/index',
+    name: 'refresh_index',
+    component: refreshcss
+  }]
 })

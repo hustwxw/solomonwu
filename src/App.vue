@@ -38,12 +38,20 @@ export default {
                 third: false,
                 hash : '#/H5/static',
                 hover : false
+            },{
+                name: '重构页面脚手架',
+                first: true,
+                second: false,
+                third: false,
+                hash : '#/RefreshCss/index',
+                hover : false
             }, {
                 name: '组件',
                 first: true,
                 second: false,
                 third: false,
-                hover : false
+                hover : false,
+                hash:'#/basic/button'
             }, {
                 name: 'Basic',
                 first: false,
@@ -155,6 +163,19 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/tips/toast'
+            }, {
+                name: 'SVG',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: 'SVG动画',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/svg/animate'
             }]
         }
   },
@@ -181,7 +202,7 @@ export default {
       });
       menuData.hover = true;
       if(menuData.third == true){
-        this.menus[1].hover = true;
+        this.menus[3].hover = true;
       }
     }
   }

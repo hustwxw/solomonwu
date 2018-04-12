@@ -874,10 +874,6 @@
 .ued-checkbox-table tr td .ued-form-checkbox input{
 	position: absolute;
 }
-svg path,svg rect{
-	fill: #ff6700;
-
-}
 /*分页器pagination*/
 .ued-pagination{
 	width: 610px;
