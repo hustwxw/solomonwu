@@ -3,6 +3,7 @@
         <el-header class="header" v-show="showHeader">
             <div class="logo"></div>
             <span class="webname">用户体验中心</span>
+            <a href="/" class="exit">退出</a>
         </el-header>
         <el-container>
             <el-aside class="aside" width="16%" v-show="showLeft">
@@ -215,7 +216,7 @@ export default {
 
 <style src="./assets/css/ued.css"></style>
 
-<style scoped>
+<style scoped lang="less">
   .header{
     height:62px;
     background-color: #1E262F;
@@ -288,5 +289,21 @@ export default {
     display: inline-block;
     position: relative;
     top:-8px;    
+  }
+  .exit{
+    float:right;
+    display: inline-block;
+    position: relative;
+    /*top: -8px;*/
+    font-size:14px;
+    color:white;
+    text-decoration: none;
+    letter-spacing: -0.38px;
+    line-height: 60px;
+    height:60px;
+    transition: all .3s ease-in-out;
+    &:hover{
+        color:lightgray;
+    }
   }
 </style>

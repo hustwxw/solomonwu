@@ -26,15 +26,15 @@ export default{
 	data(){
 		return {
 			labelPosition: 'right',
-			username:'hustwxw',
-			password:'hustwxw'
+			username:'admin',
+			password:'admin'
 		};
 	},
 	methods:{
 		login(){
 			var _this = this;
 			_this.$router.push({path:'/desc/index'})
-			return false;
+			// return false;
 			eking.net.get("login",{
 				user : _this.username,
 				password : _this.password
