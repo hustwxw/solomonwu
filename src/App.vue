@@ -3,7 +3,7 @@
         <el-header class="header" v-show="showHeader">
             <div class="logo"></div>
             <span class="webname">用户体验中心</span>
-            <a href="/" class="exit">退出&gt;&gt;</a>
+            <a href="../index.html" class="exit">退出&gt;&gt;</a>
         </el-header>
         <el-container>
             <el-aside class="aside" width="16%" v-show="showLeft">
