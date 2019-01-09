@@ -10,10 +10,11 @@
 		</div>
 		<h2>2、CSS命名规则</h2>
 		<div class="box">
-			<h3>统一使用格式 a-b-c 三部分进行命名</h3>
+			<h3>统一使用格式 a-b-c-d 三部分进行命名</h3>
 			<h3>a: 固定是ued</h3>
 			<h3>b: 组件名字，比如input、color、button之类</h3>
 			<h3>c: 组件子类型，比如input有基础类型的basic，也有复合类型的compose，也有成功类型success等等</h3>
+			<h3>d: 进一步细分类型，可选项</h3>
 		</div>
 		<div class="box m_t_20">
 			<h3>例子：</h3>

@@ -91,7 +91,7 @@ export default {
                 hover : false,
                 hash : '#/basic/button'
             }, {
-                name: '盒子模型 Box',
+                name: '盒子/布局模型 Box',
                 first: false,
                 second: false,
                 third: true,
