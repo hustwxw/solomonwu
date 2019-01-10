@@ -28,6 +28,10 @@
   margin: 0px;
 }
 
+.ued-flex-inline {
+  display: inline-flex;
+}
+
 .ued-flex-center {
   justify-content: center;
   align-items: center;
@@ -39,6 +43,12 @@
   height: 100%;
   box-sizing: border-box;
   border: 0;
+}
+
+.ued-flex-row {
+  display: inline-flex;
+  flex: 1;
+  width: 100%;
 }
 
 .ued-flex-coloumn {
