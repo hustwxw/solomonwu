@@ -98,7 +98,27 @@
 			    </g>
 			</svg> 
 		</div>
-		<div class="item"></div>
+		<div class="item">
+			<svg viewBox="0 0 100 100" style="width:100%;height:100%">
+				<path d="M 50,50 m 0,-47
+                a 47,47 0 1 1 0,94
+                a 47,47 0 1 1 0,-94" stroke="#eaeef2" stroke-width="6" fill-opacity="0">
+         </path>
+         <path d="M 50,50 m 0,-47
+                a 47,47 0 1 1 0,94
+                a 47,47 0 1 1 0,-94" stroke-linecap="round" stroke="#2d8cf0" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 295.31px, 295.31px; stroke-dashoffset: 59.0619px; transition: stroke-dashoffset 0.6s ease 0s, stroke 0.6s ease 0s;"></path>
+          <!-- 
+          	stroke-dasharray 用于创建虚线
+
+          	绘制虚线: 一个参数时： 表示一段虚线长度和每段虚线之间的间距 
+						两个参数或者多个参数时：一个表示长度，一个表示间距
+
+						stroke-dashoffset 定义一条线，文本或元素距离（相当于基于position：relative；设置left值。只是不像left单纯的基于x方向设置， stroke-dashoffset是基于svg路径设置的）
+
+
+           -->
+       </svg>
+		</div>
 		<div class="item"></div>
 	</div>	
 </transition>
