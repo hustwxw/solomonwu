@@ -1073,10 +1073,12 @@
 
 .ued-progress-animate {
   animation: progress 5s linear;
+  -webkit-animation: progress 5s linear;
 }
 
 .ued-progress-animate.infinite {
   animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
 }
 
 @keyframes progress {
