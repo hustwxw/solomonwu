@@ -46,7 +46,7 @@ export default{
         uedProgeressBasic:{
           flag : false,
           html : ['<div class="ued-progress-basic animate-tran">\n',
-                 '  <div class="ued-progress-pro animate-tran" style="width:40%"></div>\n',
+                 '  <div class="ued-progress-bar animate-tran" style="width:40%"></div>\n',
                  '  <div class="ued-progress-text">40%</div>\n',
                  '</div>'].join(''),
           scriptText : ''
@@ -54,7 +54,7 @@ export default{
         uedProgeressNotxt:{
           flag : false,
           html : ['<div class="ued-progress-basic ued-progress-notext animate-tran">\n',
-                 '  <div class="ued-progress-pro animate-tran" style="width:80%"></div>\n',
+                 '  <div class="ued-progress-bar animate-tran" style="width:80%"></div>\n',
                  '  <div class="ued-progress-text">80%</div>\n',
                  '</div>'].join(''),
           scriptText : ''
