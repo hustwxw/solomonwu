@@ -9,9 +9,9 @@
     <div class="row" v-if="map.uedPieBasic.flag">
       <span class="ued-tag-basic"></span>
       <div class="code">
-        <input type="button" class="copy" @click="copy" value="复制代码">
+        <input type="button" class="copy" @click="copy" value="复制option">
         <pre v-text="map.uedPieBasic.html"></pre>
-        <pre v-text="map.uedPieBasic.scriptText" v-if="map.uedPieBasic.scriptText"></pre>
+        optoin参数：<pre v-html="map.uedPieBasic.scriptText" v-if="map.uedPieBasic.scriptText"></pre>
       </div>      
     </div>
   </div>  
@@ -32,7 +32,7 @@ export default{
         uedPieBasic:{
           flag : false,
           html : '<div class="block" id="basic"></div>',
-          scriptText : 'optoin参数：{"color":["#3398DB"],"tooltip":{"show":true},"grid":{"left":"3%","right":"4%","bottom":"8%","top":"15%","containLabel":true},"xAxis":[{"type":"category","data":["海南","首都","天津","香港","祥鹏","西部","福州","北部湾","乌航","金鹏","长安","桂林"],"axisLabel":{"fontSize":null,"color":"#999999","fontFamily":"PingFang Regular"},"axisTick":{"show":false},"axisLine":{"show":true,"lineStyle":{"color":"#dddddd"}}}],"yAxis":{"type":"value","name":"直销额\n占比(%)","nameTextStyle":{"fontSize":null,"color":"#999999","fontFamily":"PingFang Regular"},"axisLabel":{"fontSize":null,"color":"#999999","fontFamily":"PingFang Regular"},"axisLine":{"show":false},"axisTick":{"show":false},"min":0,"max":1},"series":[{"name":"收入","type":"bar","barWidth":"60%","data":["0.15","0.78","0.30","0.50","0.58","0.49","0.01","0.08","0.30","0.50","0.58","0.49"],"label":{"show":true,"position":"top","fontSize":null,"color":"#3a404c","fontFamily":"PingFang Regular"},"itemStyle":{"color":{"x":0,"y":0,"x2":0,"y2":1,"type":"linear","global":false,"colorStops":[{"offset":0,"color":"#0091ff"},{"offset":1,"color":"#00e4ff"}]}}}]}',
+          scriptText : '{"color":["#3398DB"],"tooltip":{"show":true},"grid":{"left":"3%","right":"4%","bottom":"8%","top":"15%","containLabel":true},"xAxis":[{"type":"category","data":["海南","首都","天津","香港","祥鹏","西部","福州","北部湾","乌航","金鹏","长安","桂林"],"axisLabel":{"fontSize":null,"color":"#999999","fontFamily":"PingFang Regular"},"axisTick":{"show":false},"axisLine":{"show":true,"lineStyle":{"color":"#dddddd"}}}],"yAxis":{"type":"value","name":"直销额占比(%)","nameTextStyle":{"fontSize":null,"color":"#999999","fontFamily":"PingFang Regular"},"axisLabel":{"fontSize":null,"color":"#999999","fontFamily":"PingFang Regular"},"axisLine":{"show":false},"axisTick":{"show":false},"min":0,"max":1},"series":[{"name":"收入","type":"bar","barWidth":"60%","data":["0.15","0.78","0.30","0.50","0.58","0.49","0.01","0.08","0.30","0.50","0.58","0.49"],"label":{"show":true,"position":"top","fontSize":null,"color":"#3a404c","fontFamily":"PingFang Regular"},"itemStyle":{"color":{"x":0,"y":0,"x2":0,"y2":1,"type":"linear","global":false,"colorStops":[{"offset":0,"color":"#0091ff"},{"offset":1,"color":"#00e4ff"}]}}}]}',
           script () {
             var option = {
               color: ['#3398DB'],
@@ -137,8 +137,9 @@ export default{
       (_this.map[param].flag)?(_this.map[param].flag = false):(_this.map[param].flag = true);
     },
     copy(event){
-      var code = event.target.parentNode.getElementsByTagName('pre')[0].innerText;
+      var code = event.target.parentNode.getElementsByTagName('pre')[1].innerText;
       copy(code)
+      alert("复制成功")
     }
   },
   mounted(){
