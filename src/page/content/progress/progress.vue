@@ -30,7 +30,7 @@
     </div>
 
     <div class="row">
-      <span class="ued-tag-basic">变化用法</span>
+      <span class="ued-tag-basic">变化用法（js控制）</span>
       <span v-html="map.uedProgeressDynamic.html"></span>
       <a href="javascript:void(0)" class="view" @click="view('uedProgeressDynamic')">示例代码</a>       
     </div>
@@ -40,6 +40,20 @@
         <input type="button" class="copy" @click="copy" value="复制代码">
         <pre v-text="map.uedProgeressDynamic.html"></pre>
         <pre v-text="map.uedProgeressDynamic.scriptText" v-if="map.uedProgeressDynamic.scriptText"></pre>
+      </div>      
+    </div>
+
+    <div class="row">
+      <span class="ued-tag-basic">css3用法</span>
+      <span v-html="map.uedProgeressCss3.html"></span>
+      <a href="javascript:void(0)" class="view" @click="view('uedProgeressCss3')">示例代码</a>       
+    </div>
+    <div class="row" v-if="map.uedProgeressCss3.flag">
+      <span class="ued-tag-basic"></span>
+      <div class="code">
+        <input type="button" class="copy" @click="copy" value="复制代码">
+        <pre v-text="map.uedProgeressCss3.html"></pre>
+        <pre v-text="map.uedProgeressCss3.scriptText" v-if="map.uedProgeressCss3.scriptText"></pre>
       </div>      
     </div>
   </div>  
@@ -116,7 +130,15 @@ export default{
               if(flag === -1){n--;}
             }, 200);
           }
-        }        
+        },    
+        uedProgeressCss3:{
+          flag : false,
+          html : ['<div class="ued-progress-basic animate-tran ued-progress-notext">\n',
+                 '  <div class="ued-progress-bar ued-progress-animate infinite"></div>\n',
+                 '  <div class="ued-progress-text"></div>\n',
+                 '</div>'].join(''),
+          scriptText : ''
+        }
       }
     };
   },
