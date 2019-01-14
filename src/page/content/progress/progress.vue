@@ -28,6 +28,20 @@
         <pre v-text="map.uedProgeressNotxt.scriptText" v-if="map.uedProgeressNotxt.scriptText"></pre>
       </div>      
     </div>
+
+    <div class="row">
+      <span class="ued-tag-basic">变化用法</span>
+      <span v-html="map.uedProgeressDynamic.html"></span>
+      <a href="javascript:void(0)" class="view" @click="view('uedProgeressDynamic')">示例代码</a>       
+    </div>
+    <div class="row" v-if="map.uedProgeressDynamic.flag">
+      <span class="ued-tag-basic"></span>
+      <div class="code">
+        <input type="button" class="copy" @click="copy" value="复制代码">
+        <pre v-text="map.uedProgeressDynamic.html"></pre>
+        <pre v-text="map.uedProgeressDynamic.scriptText" v-if="map.uedProgeressDynamic.scriptText"></pre>
+      </div>      
+    </div>
   </div>  
 </transition>
 </template>
@@ -58,6 +72,50 @@ export default{
                  '  <div class="ued-progress-text">80%</div>\n',
                  '</div>'].join(''),
           scriptText : ''
+        },
+        uedProgeressDynamic:{
+          flag : false,
+          html : ['<div class="ued-progress-basic animate-tran">\n',
+                 '  <div class="ued-progress-bar animate-tran" style="width:0%" id="dynamic"></div>\n',
+                 '  <div class="ued-progress-text">0%</div>\n',
+                 '</div>'].join(''),
+          scriptText : [
+            '进度条运行测试的脚本\n',
+            'var bar = $("#dynamic");\n',
+            'var text = bar.next();\n',
+            'var n = 0;\n',
+            'var flag = 0;\n',
+            'var handler = setInterval(() => {\n',
+            '  bar.width(`${n}%`);\n',
+            '  text.text(`${n}%`);\n',
+            '  if(n === 100){\n',
+            '    flag = -1;\n',
+            '  }\n',
+            '  if(n === 0){\n',
+            '    flag = 1;\n',
+            '  }\n',
+            '  if(flag === 1){n++;}\n',
+            '  if(flag === -1){n--;}\n',
+            '}, 200);\n',
+          ].join(''),
+          script () {
+            var bar = $("#dynamic");
+            var text = bar.next();
+            var n = 0;
+            var flag = 0;
+            var handler = setInterval(() => {
+              bar.width(`${n}%`);
+              text.text(`${n}%`);
+              if(n === 100){
+                flag = -1;
+              }
+              if(n === 0){
+                flag = 1;
+              }
+              if(flag === 1){n++;}
+              if(flag === -1){n--;}
+            }, 200);
+          }
         }        
       }
     };
