@@ -1072,8 +1072,8 @@
 }
 
 .ued-progress-animate {
-  animation: progress 5s linear;
-  -webkit-animation: progress 5s linear;
+  animation: progress-css3 5s linear;
+  -webkit-animation: progress-css3 5s linear;
 }
 
 .ued-progress-animate.infinite {
@@ -1081,7 +1081,7 @@
   -webkit-animation-iteration-count: infinite;
 }
 
-@keyframes progress {
+@keyframes progress-css3 {
   0% {
     width: 0%;
   }
