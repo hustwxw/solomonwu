@@ -1076,6 +1076,7 @@
   -webkit-animation: progress-css3 5s linear;
 }
 
+/*循环次数无限infinite*/
 .ued-progress-animate.infinite {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;

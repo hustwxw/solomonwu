@@ -190,6 +190,19 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/progress/progress'
+            }, {
+                name: '图表',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '柱状图',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/echart/bar'
             }]
         }
   },

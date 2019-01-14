@@ -27,6 +27,8 @@ const svg_animate = r => require.ensure([], () => r(require('@/page/content/svg/
 
 const progress = r => require.ensure([], () => r(require('@/page/content/progress/progress')), 'content_progress_progress');
 
+const echart_bar = r => require.ensure([], () => r(require('@/page/content/echart/bar')), 'content_echart_bar');
+
 export default new Router({
   routes: [{
     path: '/',
@@ -92,5 +94,9 @@ export default new Router({
     path: '/progress/progress',
     name: 'progress_progress',
     component: progress
+  }, {
+    path: '/echart/bar',
+    name: 'echart_bar',
+    component: echart_bar
   }]
 })

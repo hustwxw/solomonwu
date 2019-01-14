@@ -60,6 +60,14 @@ body, .el-main {
   margin-bottom: 15px;
 }
 
+.row .block {
+  display: inline-flex;
+  flex: 1;
+  height: 400px;
+  border: 1px solid #ccc;
+  width: 400px;
+}
+
 .view {
   display: inline-block;
   width: 80px;
