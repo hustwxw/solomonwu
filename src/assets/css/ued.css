@@ -1,4 +1,5 @@
 @import url(./font.css);
+@import url(./animate.css);
 
 /*box start*/
 .ued-box-basic {
@@ -1037,4 +1038,35 @@
   color: #fff;
   border: 1px solid #f3374b;
   cursor: pointer;
+}
+
+/*进度条*/
+.ued-progress-basic {
+  display: inline-block;
+  width: 200px;
+  height: 15px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #eee;
+}
+
+.ued-progress-basic .ued-progress-pro {
+  position: absolute;
+  border-radius: 15px;
+  left: 0;
+  height: 100%;
+  background-color: #c9b479;
+}
+
+.ued-progress-basic .ued-progress-text {
+  font-size: 15px;
+  text-align: center;
+  color: #666;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.ued-progress-basic.ued-progress-notext .ued-progress-text {
+  display: none;
 }

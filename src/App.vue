@@ -177,6 +177,19 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/svg/animate'
+            }, {
+                name: 'Progress',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '进度条Progress',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/progress/progress'
             }]
         }
   },

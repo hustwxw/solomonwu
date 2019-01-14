@@ -25,6 +25,8 @@ const check_table = r => require.ensure([], () => r(require('@/page/content/tabl
 
 const svg_animate = r => require.ensure([], () => r(require('@/page/content/svg/animate')), 'content_svg_animate');
 
+const progress = r => require.ensure([], () => r(require('@/page/content/progress/progress')), 'content_progress_progress');
+
 export default new Router({
   routes: [{
     path: '/',
@@ -86,5 +88,9 @@ export default new Router({
     path: '/RefreshCss/index',
     name: 'refresh_index',
     component: refreshcss
+  }, {
+    path: '/progress/progress',
+    name: 'progress_progress',
+    component: progress
   }]
 })
