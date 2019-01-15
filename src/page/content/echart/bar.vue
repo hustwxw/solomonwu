@@ -4,7 +4,11 @@
     <div class="row">
       <span class="ued-tag-basic">基础用法</span>
       <span v-html="map.uedBarBasic.html"></span>
-      <a href="javascript:void(0)" class="view" @click="view('uedBarBasic')">示例代码</a>       
+      <a href="javascript:void(0)" class="view" @click="view('uedBarBasic')">示例代码</a>  
+
+      <span class="ued-tag-basic">横向用法</span>
+      <span v-html="map.uedBarHorizontal.html"></span>
+      <a href="javascript:void(0)" class="view" @click="view('uedBarHorizontal')">示例代码</a>     
     </div>
     <div class="row" v-if="map.uedBarBasic.flag">
       <span class="ued-tag-basic"></span>
@@ -12,6 +16,14 @@
         <input type="button" class="copy" @click="copy" value="复制option">
         <pre v-text="map.uedBarBasic.html"></pre>
         optoin参数：<pre v-html="map.uedBarBasic.scriptText" v-if="map.uedBarBasic.scriptText"></pre>
+      </div>      
+    </div>
+    <div class="row" v-if="map.uedBarHorizontal.flag">
+      <span class="ued-tag-basic"></span>
+      <div class="code">
+        <input type="button" class="copy" @click="copy" value="复制option">
+        <pre v-text="map.uedBarHorizontal.html"></pre>
+        optoin参数：<pre v-html="map.uedBarHorizontal.scriptText" v-if="map.uedBarHorizontal.scriptText"></pre>
       </div>      
     </div>
   </div>  
@@ -127,6 +139,80 @@ export default{
             scriptText : formatJson.plain(option),
             script () {
               echarts.init(document.getElementById('basic')).setOption(option);
+            }
+          }
+
+        })(),
+
+        uedBarHorizontal: (function(){
+
+          var labelRight = {
+              normal: {
+                  position: 'right'
+              }
+          };
+          var option = {
+              tooltip : {
+                  trigger: 'axis',
+                  axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                      type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                  }
+              },
+              grid: {
+                  top: 80,
+                  bottom: 30
+              },
+              xAxis: {
+                  type : 'value',
+                  splitLine: {lineStyle:{type:'dashed'}},
+              },
+              yAxis: {
+                  type : 'category',
+                  axisLine: {show: false},
+                  axisLabel: {show: false},
+                  axisTick: {show: false},
+                  splitLine: {show: false},
+                  data : ['ten', 'nine', 'eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one']
+              },
+              series : [
+                  {
+                      name:'生活费',
+                      type:'bar',
+                      stack: '总量',
+                      label: {
+                          normal: {
+                              show: true,
+                              formatter: '{b}'
+                          }
+                      },
+                      // itemStyle: {
+                      //   color: function(args){
+                      //     var colors = ['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'];
+                      //     return colors[parseInt(Math.random()*colors.length)];
+                      //   }
+                      // },
+                      data:[
+                          {value: 0.07, label: labelRight},
+                          {value: -0.09, label: labelRight},
+                          0.2, 0.44,
+                          {value: -0.23, label: labelRight},
+                          0.08,
+                          {value: -0.17, label: labelRight},
+                          0.47,
+                          {value: -0.36, label: labelRight},
+                          0.18
+                      ]
+                  }
+              ]
+          };
+
+
+          return {
+            flag : false,
+            html : '<div class="block" id="horizontal"></div>',
+            scriptText : formatJson.plain(option),
+            script () {
+              echarts.init(document.getElementById('horizontal')).setOption(option);
             }
           }
 
