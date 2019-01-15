@@ -203,6 +203,13 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/echart/bar'
+            }, {
+                name: '饼图',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/echart/pie'
             }]
         }
   },

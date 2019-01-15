@@ -28,6 +28,7 @@ const svg_animate = r => require.ensure([], () => r(require('@/page/content/svg/
 const progress = r => require.ensure([], () => r(require('@/page/content/progress/progress')), 'content_progress_progress');
 
 const echart_bar = r => require.ensure([], () => r(require('@/page/content/echart/bar')), 'content_echart_bar');
+const echart_pie = r => require.ensure([], () => r(require('@/page/content/echart/pie')), 'content_echart_pie');
 
 export default new Router({
   routes: [{
@@ -98,5 +99,9 @@ export default new Router({
     path: '/echart/bar',
     name: 'echart_bar',
     component: echart_bar
+  }, {
+    path: '/echart/pie',
+    name: 'echart_pie',
+    component: echart_pie
   }]
 })
