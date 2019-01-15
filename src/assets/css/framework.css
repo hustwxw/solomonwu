@@ -84,6 +84,7 @@ body, .el-main {
   padding: 10px 5px;
   width: 85%;
   overflow: scroll;
+  max-height: 300px;
 }
 
 .code:hover {
