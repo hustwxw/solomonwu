@@ -210,6 +210,13 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/echart/pie'
+            }, {
+                name: '线图',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/echart/line'
             }]
         }
   },

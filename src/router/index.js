@@ -29,6 +29,7 @@ const progress = r => require.ensure([], () => r(require('@/page/content/progres
 
 const echart_bar = r => require.ensure([], () => r(require('@/page/content/echart/bar')), 'content_echart_bar');
 const echart_pie = r => require.ensure([], () => r(require('@/page/content/echart/pie')), 'content_echart_pie');
+const echart_line = r => require.ensure([], () => r(require('@/page/content/echart/line')), 'content_echart_line');
 
 export default new Router({
   routes: [{
@@ -103,5 +104,9 @@ export default new Router({
     path: '/echart/pie',
     name: 'echart_pie',
     component: echart_pie
+  }, {
+    path: '/echart/line',
+    name: 'echart_line',
+    component: echart_line
   }]
 })

@@ -30,6 +30,9 @@
       <span class="ued-tag-basic">南丁格尔图二</span>
       <span v-html="map.uedPieNDGE2.html"></span>
       <a href="javascript:void(0)" class="view" @click="view('uedPieNDGE2')">示例代码</a>
+      <span class="ued-tag-basic">环内文字</span>
+      <span v-html="map.uedPieWord.html"></span>
+      <a href="javascript:void(0)" class="view" @click="view('uedPieWord')">示例代码</a>
     </div>
     <div class="row" v-if="map.uedPieNDGE2.flag">
       <span class="ued-tag-basic"></span>
@@ -37,6 +40,14 @@
         <input type="button" class="copy" @click="copy" value="复制option">
         <pre v-text="map.uedPieNDGE2.html"></pre>
         optoin参数：<pre v-html="map.uedPieNDGE2.scriptText" v-if="map.uedPieNDGE2.scriptText"></pre>
+      </div>      
+    </div>
+    <div class="row" v-if="map.uedPieWord.flag">
+      <span class="ued-tag-basic"></span>
+      <div class="code">
+        <input type="button" class="copy" @click="copy" value="复制option">
+        <pre v-text="map.uedPieWord.html"></pre>
+        optoin参数：<pre v-html="map.uedPieWord.scriptText" v-if="map.uedPieWord.scriptText"></pre>
       </div>      
     </div>
   </div>  
@@ -375,6 +386,111 @@ export default{
             scriptText : formatJson.plain(option),
             script () {
               echarts.init(document.getElementById('ndgr2')).setOption(option);
+            }
+          }
+
+        })(),
+
+        uedPieWord: (function(){
+
+          var option = {
+                "legend": {
+                    "show": false,
+                },
+                "title": {
+                    "text": "{a|本周}{b|89.3%}",
+                    "x": "center",
+                    "y": "40%",
+                    "textStyle": {
+                        "rich": {
+                            a: {
+                                fontSize: 16,
+                                color: "#666666",
+                                padding: [0, 10, 0, 0],
+                                fontFamily: "PingFang Regular"
+                            },
+                            b: {
+                                fontSize: 16,
+                                color: "#3a404c",
+                                fontFamily: "PingFang Medium"
+                            }
+                        }
+                    },
+                    "subtext": "{a|同比}{b|-1.6%}",
+                    "subtextStyle": {
+                        "rich": {
+                            a: {
+                                fontSize: 16,
+                                color: "#666666",
+                                padding: [0, 10, 0, 0],
+                                fontFamily: "PingFang Regular"
+                            },
+                            b: {
+                                fontSize: 16,
+                                color: "#ff0000",
+                                fontFamily: "PingFang Medium"
+                            }
+                        }
+                    },
+                },
+                "calculable": true,
+                "startAngle": 100,
+                "series": [{
+                    "type": "pie",
+                    "z": 0,
+                    label: {
+                        normal: {
+                            position: "center"
+                        }
+                    },
+                    "center": ["50%", "50%"],
+                    "radius": ["70%", "85%"],
+                    "data": [{
+                        "value": 100,
+                        // "name": "占位",
+                        "tooltip": {
+                            "show": false
+                        },
+                        "itemStyle": {
+                            "normal": {
+                                "color": "#f5f5f5"
+                            }
+                        },
+                        z: 2
+                    }, {
+                        "value": 300,
+                        // "name": "占位",
+                        "tooltip": {
+                            "show": false
+                        },
+                        z: 1,
+                        "itemStyle": {
+                            "normal": {
+                                "color": new echarts.graphic.LinearGradient(
+                                    0, 0, 1, 0, [{
+                                        offset: 0,
+                                        color: '#ff1b00'
+                                    }, {
+                                        offset: 1,
+                                        color: '#ffb700'
+                                    }]
+                                )
+                            }
+                        }
+                    }],
+                    "hoverAnimation": false
+                }],
+                "tooltip": {
+                    "show": true
+                }
+          }
+
+          return {
+            flag : false,
+            html : '<div class="block" id="word"></div>',
+            scriptText : formatJson.plain(option),
+            script () {
+              echarts.init(document.getElementById('word')).setOption(option);
             }
           }
 
