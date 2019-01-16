@@ -103,7 +103,7 @@
 import eking from "@/lib/eking"
 import sweet from "sweetalert"
 import copy from "copy-to-clipboard"
-import $ from "jquery"
+// import $ from "jquery"
 
 export default{
 	name: 'basicButton',

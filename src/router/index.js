@@ -25,6 +25,9 @@ const check_table = r => require.ensure([], () => r(require('@/page/content/tabl
 
 const svg_animate = r => require.ensure([], () => r(require('@/page/content/svg/animate')), 'content_svg_animate');
 
+const dialog_dialog = r => require.ensure([], () => r(require('@/page/content/dialog/dialog')), 'content_dialog_dialog');
+const element_uipage = r => require.ensure([], () => r(require('@/page/content/third/elementui')), 'content_third_elementui');
+
 export default new Router({
   routes: [{
     path: '/',
@@ -86,5 +89,13 @@ export default new Router({
     path: '/RefreshCss/index',
     name: 'refresh_index',
     component: refreshcss
+  }, {
+    path: '/dialog/dialog',
+    name: 'dialog_dialog',
+    component: dialog_dialog
+  }, {
+    path: '/third/elementui',
+    name: 'element_uipage',
+    component: element_uipage
   }]
 })

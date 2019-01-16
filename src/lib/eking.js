@@ -4,7 +4,7 @@ var returnObj = {};
 require('./prototype.js');
 var _ = require('lodash');
 var axios = require('axios');
-var $ = require('jquery');
+import $ from "jquery";
 
 
 //参数处理库
@@ -1295,119 +1295,119 @@ returnObj.city = (function() {
     };
 
     cp._renderCity = function() {
-            var _this = this;
+        var _this = this;
 
-            _this.city_selector.find(".city_list").html("");
-            _this.city_selector.find("ul.city_tab").html("");
+        _this.city_selector.find(".city_list").html("");
+        _this.city_selector.find("ul.city_tab").html("");
 
-            var mainData = (_this.isDomestic) ? _this.domesticData : _this.internationalData;
-            var cityPanel = [];
+        var mainData = (_this.isDomestic) ? _this.domesticData : _this.internationalData;
+        var cityPanel = [];
 
-            //生成tab     
-            for (var i = 0, len = _this.tab.length; i < len; i++) {
-                _this.city_selector.find("ul.city_tab").append("<li class='" + (i == 0 ? 'on' : '') + "'>" + _this.tab[i] + "</li>");
+        //生成tab     
+        for (var i = 0, len = _this.tab.length; i < len; i++) {
+            _this.city_selector.find("ul.city_tab").append("<li class='" + (i == 0 ? 'on' : '') + "'>" + _this.tab[i] + "</li>");
 
-                //渲染城市列表
-                var cities = [];
-                for (var j = 0, jLen = _this.tab[i].length; j < jLen; j++) {
-                    cities.push({
-                        index: _this.tab[i][j],
-                        data: mainData[_this.tab[i][j]] || {
-                            cities: []
-                        }
-                    });
-                }
-
-                cityPanel.push(cities);
+            //渲染城市列表
+            var cities = [];
+            for (var j = 0, jLen = _this.tab[i].length; j < jLen; j++) {
+                cities.push({
+                    index: _this.tab[i][j],
+                    data: mainData[_this.tab[i][j]] || {
+                        cities: []
+                    }
+                });
             }
 
-            //处理热门tab
-            if (_this.isShowHot) {
-                _this.city_selector.find("ul.city_tab>li:eq(0)").removeClass("on").before("<li class='on'>热门</li>");
-            }
-            // console.log(cityPanel);
-            var tmpl = "<div><dl><dt>A</dt><dd><a href='#'>adsf</a></dd></dl></div>";
-            var tmpl = [
-                '<%for(var i=0,len=data.length;i<len;i++){%>',
-                '<div class="city_area">',
-                '   <%for(var j=0,l=data[i].length;j<l;j++){%>',
-                '       <%if(data[i][j].data.cities.length != 0){%>',
-                '           <dl><dt><%=data[i][j].index%></dt><dd class="cf">',
-                '           <%for(var k=0,m=data[i][j].data.cities.length;k<m;k++){%>',
-                '               <a href="javascript:void(0)" data-city-href data-code="<%=data[i][j].data.cities[k].code%>"><%=data[i][j].data.cities[k].city%></a>',
-                '           <%}%>',
-                '           </dd></dl>',
-                '       <%}%>',
-                '   <%}%>',
-                '</div>',
-                '<%}%>'
-            ].join('');
-
-            var hotTmpl = [
-                '<div class="city_area">',
-                '   <dl><dt></dt><dd style="margin-left:0px;" class="cf">',
-                '   <%for(var i=0,len=data.length;i<len;i++){%>',
-                '       <a href="javascript:void(0)" data-city-href data-code="<%=data[i].code%>"><%=data[i].city%></a>',
-                '   <%}%>',
-                '   </dd></dl>',
-                '</div>'
-            ].join("");
-
-            // console.log(_this.hotData)
-
-            var html = getHtml(tmpl, {
-                data: cityPanel
-            });
-
-            var hotHtml = getHtml(hotTmpl, {
-                data: _this.hotData
-            });
-
-            _this.city_selector.find(".city_list").html(html);
-
-            _this.city_selector.find(".city_list>.city_area:eq(0)").before(hotHtml);
-
-            //处理自定义Tab
-
-            if (_this.editTab.length != 0) {
-
-                for (var p = 0; p < _this.editTab.length; p++) {
-
-                    _this.city_selector.find("ul.city_tab").append("<li class=''>" + _this.editTab[p].name + "</li>");
-                    var filter = _this.editTab[p].filter || function() {};
-                    var i18n = filter(_this.cityData) || [];
-                    console.log(i18n);
-                    var internationTmpl = [
-                        '<div iiii class="city_area">',
-                        '   <dl><dt></dt><dd>',
-                        '   <%for(var i=0,len=data.length;i<len;i++){%>',
-                        '       <a href="javascript:void(0)" data-city-href data-code="<%=data[i].code%>"><%=data[i].city%></a>',
-                        '   <%}%>',
-                        '   </dd></dl>',
-                        '</div>'
-                    ].join("");
-
-                    var internationHtml = getHtml(internationTmpl, {
-                        data: i18n
-                    })
-                    _this.city_selector.find(".city_list>.city_area:last").after(internationHtml);
-                }
-            }
-
-
-            _this.city_selector.find("dd").width(_this.areaTipWidth * 2 + 50); //适配样式
-
-            _this.city_selector.find(".city_area:eq(0)").show();
-
+            cityPanel.push(cities);
         }
-        /**
-         * 查询城市数据
-         * @for City
-         * @method City.search
-         * @params key {String} 城市的三字码或拼音
-         * @example 
-                City.search("HAK");
-        */
+
+        //处理热门tab
+        if (_this.isShowHot) {
+            _this.city_selector.find("ul.city_tab>li:eq(0)").removeClass("on").before("<li class='on'>热门</li>");
+        }
+        // console.log(cityPanel);
+        var tmpl = "<div><dl><dt>A</dt><dd><a href='#'>adsf</a></dd></dl></div>";
+        var tmpl = [
+            '<%for(var i=0,len=data.length;i<len;i++){%>',
+            '<div class="city_area">',
+            '   <%for(var j=0,l=data[i].length;j<l;j++){%>',
+            '       <%if(data[i][j].data.cities.length != 0){%>',
+            '           <dl><dt><%=data[i][j].index%></dt><dd class="cf">',
+            '           <%for(var k=0,m=data[i][j].data.cities.length;k<m;k++){%>',
+            '               <a href="javascript:void(0)" data-city-href data-code="<%=data[i][j].data.cities[k].code%>"><%=data[i][j].data.cities[k].city%></a>',
+            '           <%}%>',
+            '           </dd></dl>',
+            '       <%}%>',
+            '   <%}%>',
+            '</div>',
+            '<%}%>'
+        ].join('');
+
+        var hotTmpl = [
+            '<div class="city_area">',
+            '   <dl><dt></dt><dd style="margin-left:0px;" class="cf">',
+            '   <%for(var i=0,len=data.length;i<len;i++){%>',
+            '       <a href="javascript:void(0)" data-city-href data-code="<%=data[i].code%>"><%=data[i].city%></a>',
+            '   <%}%>',
+            '   </dd></dl>',
+            '</div>'
+        ].join("");
+
+        // console.log(_this.hotData)
+
+        var html = getHtml(tmpl, {
+            data: cityPanel
+        });
+
+        var hotHtml = getHtml(hotTmpl, {
+            data: _this.hotData
+        });
+
+        _this.city_selector.find(".city_list").html(html);
+
+        _this.city_selector.find(".city_list>.city_area:eq(0)").before(hotHtml);
+
+        //处理自定义Tab
+
+        if (_this.editTab.length != 0) {
+
+            for (var p = 0; p < _this.editTab.length; p++) {
+
+                _this.city_selector.find("ul.city_tab").append("<li class=''>" + _this.editTab[p].name + "</li>");
+                var filter = _this.editTab[p].filter || function() {};
+                var i18n = filter(_this.cityData) || [];
+                console.log(i18n);
+                var internationTmpl = [
+                    '<div iiii class="city_area">',
+                    '   <dl><dt></dt><dd>',
+                    '   <%for(var i=0,len=data.length;i<len;i++){%>',
+                    '       <a href="javascript:void(0)" data-city-href data-code="<%=data[i].code%>"><%=data[i].city%></a>',
+                    '   <%}%>',
+                    '   </dd></dl>',
+                    '</div>'
+                ].join("");
+
+                var internationHtml = getHtml(internationTmpl, {
+                    data: i18n
+                })
+                _this.city_selector.find(".city_list>.city_area:last").after(internationHtml);
+            }
+        }
+
+
+        _this.city_selector.find("dd").width(_this.areaTipWidth * 2 + 50); //适配样式
+
+        _this.city_selector.find(".city_area:eq(0)").show();
+
+    }
+    /**
+     * 查询城市数据
+     * @for City
+     * @method City.search
+     * @params key {String} 城市的三字码或拼音
+     * @example 
+            City.search("HAK");
+    */
 
     cp.search = function(key) {
         // console.log(key);

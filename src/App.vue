@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data(){
@@ -46,18 +47,31 @@ export default {
                 hash : '#/RefreshCss/index',
                 hover : false
             }, {
-                name: '组件',
+                name: '第三方组件库',
                 first: true,
                 second: false,
                 third: false,
                 hover : false,
-                hash:'#/basic/button'
+                hash:'#/third/elementui'
+            }, {
+                name: 'element ui',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/third/elementui'
+            }, {
+                name: '组件',
+                first: true,
+                second: false,
+                third: false,
+                hover : false
             }, {
                 name: 'Basic',
                 first: false,
                 second: true,
                 third: false,
-                hover : false
+                hover : false,
             }/*, {
                 name: '配色 Color',
                 first: false,
@@ -96,6 +110,19 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/basic/box'
+            }, {
+                name: 'Dialog',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '弹窗 dialog',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/dialog/dialog'
             }, {
                 name: 'Form',
                 first: false,
