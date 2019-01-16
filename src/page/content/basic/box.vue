@@ -41,6 +41,40 @@
 				<pre v-text="map.uedBoxMargin.scriptText" v-if="map.uedBoxMargin.scriptText"></pre>
 			</div>
 		</div>
+
+		<div class="row">
+			<span class="ued-tag-basic">Flex布局</span>
+			<span v-html="map.uedFlexBasic.html"></span>
+			<a href="javascript:void(0)" class="view" @click="view('uedFlexBasic')">示例代码</a>	
+			<span v-html="map.uedFlexRow.html"></span>
+			<a href="javascript:void(0)" class="view" @click="view('uedFlexRow')">示例代码</a>	
+			<span v-html="map.uedFlexColumn.html"></span>
+			<a href="javascript:void(0)" class="view" @click="view('uedFlexColumn')">示例代码</a>	
+		</div>
+		<div class="row" v-if="map.uedFlexBasic.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedFlexBasic.html"></pre>
+				<pre v-text="map.uedFlexBasic.scriptText" v-if="map.uedFlexBasic.scriptText"></pre>
+			</div>						
+		</div>
+		<div class="row" v-if="map.uedFlexRow.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedFlexRow.html"></pre>
+				<pre v-text="map.uedFlexRow.scriptText" v-if="map.uedFlexRow.scriptText"></pre>
+			</div>
+		</div>
+		<div class="row" v-if="map.uedFlexColumn.flag">
+			<span class="ued-tag-basic"></span>
+			<div class="code">
+				<input type="button" class="copy" @click="copy" value="复制代码">
+				<pre v-text="map.uedFlexColumn.html"></pre>
+				<pre v-text="map.uedFlexColumn.scriptText" v-if="map.uedFlexColumn.scriptText"></pre>
+			</div>
+		</div>
 	</div>	
 </transition>
 </template>
@@ -70,6 +104,64 @@ export default{
 					flag : false,
 					html : '<div class="ued-box-basic ued-box-margin"><span>测试文字-有20px外边距</span></div>',
 					scriptText : 'ued-box-margin默认外边距20px，如不符合需求则需要自己调整'
+				},
+
+				// Flex基础布局
+
+				uedFlexBasic:{
+					flag : false,
+					html : ['<div class="ued-flex-basic ued-flex-coloumn ued-flex-inline ">\n',
+										'  <div class="ued-flex-basic-title ued-flex-center">\n',
+										'			title\n',
+										'  </div>\n',
+										'  <div class="ued-flex-inner">\n',
+											'    <div class="ued-flex-basic ued-flex-basic-left ued-flex-center">\n',
+											'				left\n',
+											'    </div>\n',
+											'    <div class="ued-flex-basic ued-flex-basic-right ued-flex-center">\n',
+											'				right\n',
+											'    </div>\n',
+										'  </div>\n',
+									'</div>'].join(''),
+					scriptText : ''
+				},
+
+				uedFlexRow:{
+					flag : false,
+					html : ['<div class="ued-flex-basic ued-flex-coloumn ued-flex-inline">\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			1\n',
+										'  </div>\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			2\n',
+										'  </div>\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			3\n',
+										'  </div>\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			4\n',
+										'  </div>\n',										
+									'</div>'].join(''),
+					scriptText : ''
+				},
+
+				uedFlexColumn:{
+					flag : false,
+					html : ['<div class="ued-flex-basic ued-flex-inline">\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			1\n',
+										'  </div>\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			2\n',
+										'  </div>\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			3\n',
+										'  </div>\n',
+										'  <div class="ued-flex-row ued-flex-center">\n',
+										'			4\n',
+										'  </div>\n',										
+									'</div>'].join(''),
+					scriptText : ''
 				}
 			}
 		};

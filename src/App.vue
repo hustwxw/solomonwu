@@ -3,6 +3,7 @@
         <el-header class="header" v-show="showHeader">
             <div class="logo"></div>
             <span class="webname">用户体验中心</span>
+            <a href="./index.html" class="exit">退出&gt;&gt;</a>
         </el-header>
         <el-container>
             <el-aside class="aside" width="16%" v-show="showLeft">
@@ -104,7 +105,7 @@ export default {
                 hover : false,
                 hash : '#/basic/button'
             }, {
-                name: '盒子模型 Box',
+                name: '盒子/布局模型 Box',
                 first: false,
                 second: false,
                 third: true,
@@ -203,6 +204,46 @@ export default {
                 third: true,
                 hover : false,
                 hash : '#/svg/animate'
+            }, {
+                name: 'Progress',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '进度条Progress',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/progress/progress'
+            }, {
+                name: '图表',
+                first: false,
+                second: true,
+                third: false,
+                hover : false
+            }, {
+                name: '柱状图',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/echart/bar'
+            }, {
+                name: '饼图',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/echart/pie'
+            }, {
+                name: '线图',
+                first: false,
+                second: false,
+                third: true,
+                hover : false,
+                hash : '#/echart/line'
             }]
         }
   },
@@ -242,7 +283,7 @@ export default {
 
 <style src="./assets/css/ued.css"></style>
 
-<style scoped>
+<style scoped lang="less">
   .header{
     height:62px;
     background-color: #1E262F;
@@ -315,5 +356,21 @@ export default {
     display: inline-block;
     position: relative;
     top:-8px;    
+  }
+  .exit{
+    float:right;
+    display: inline-block;
+    position: relative;
+    /*top: -8px;*/
+    font-size:14px;
+    color:white;
+    text-decoration: none;
+    letter-spacing: -0.38px;
+    line-height: 60px;
+    height:60px;
+    transition: all .3s ease-in-out;
+    &:hover{
+        color:lightgray;
+    }
   }
 </style>
