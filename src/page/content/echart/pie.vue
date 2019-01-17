@@ -50,6 +50,20 @@
         optoin参数：<pre v-html="map.uedPieWord.scriptText" v-if="map.uedPieWord.scriptText"></pre>
       </div>      
     </div>
+
+    <div class="row">
+      <span class="ued-tag-basic">实心饼图</span>
+      <span v-html="map.uedPieSolid.html"></span>
+      <a href="javascript:void(0)" class="view" @click="view('uedPieSolid')">示例代码</a>
+    </div>
+    <div class="row" v-if="map.uedPieSolid.flag">
+      <span class="ued-tag-basic"></span>
+      <div class="code">
+        <input type="button" class="copy" @click="copy" value="复制option">
+        <pre v-text="map.uedPieSolid.html"></pre>
+        optoin参数：<pre v-html="map.uedPieSolid.scriptText" v-if="map.uedPieSolid.scriptText"></pre>
+      </div>      
+    </div>
   </div>  
 </transition>
 </template>
@@ -494,7 +508,89 @@ export default{
             }
           }
 
-        })()
+        })(),
+
+        uedPieSolid: (function(){
+
+          var option = {
+                "legend": {
+                    "show": false,
+                },
+                "grid": {},
+                "title": {
+                    "x": "center",
+                    "y": "38%",
+                    "text": "13,205.8",
+                    "show": true,
+                    "textStyle": {
+                        "fontSize": 30,
+                        "fontFamily": "PingFang Bold",
+                        "color": "#ffffff"
+                    },
+                    "subtext": "万元",
+                    "subtextStyle": {
+                        "fontSize": 20,
+                        "fontFamily": "PingFang Regular",
+                        "color": "#ffffff",
+                        "fontWeight": "bold"
+                    }
+                },
+                "calculable": true,
+                "startAngle": 100,
+                "series": [{
+                    "type": "pie",
+                    "z": 0,
+                    label: {
+                        normal: {
+                            position: "center"
+                        }
+                    },
+                    "center": ["50%", "50%"],
+                    "radius": ["0%", "80%"],
+                    "data": [{
+                        "value": 100,
+                        // "name": "占位",
+                        "tooltip": {
+                            "show": false
+                        },
+                        "label": {
+                            // "formatter": '年度计划执行率',
+                            textStyle: {
+                                "fontSize": 12,
+                                "color": "#84878e"
+                            }
+                        },
+                        "itemStyle": {
+                            "normal": {
+                                "color": new echarts.graphic.LinearGradient(
+                                    0, 0, 1, 0, [{
+                                        offset: 0,
+                                        color: '#ff1b00'
+                                    }, {
+                                        offset: 1,
+                                        color: '#ffb700'
+                                    }]
+                                )
+                            }
+                        }
+                    }],
+                    "hoverAnimation": false
+                }],
+                "tooltip": {
+                    "show": true
+                }
+            }
+
+          return {
+            flag : false,
+            html : '<div class="block" id="solid"></div>',
+            scriptText : formatJson.plain(option),
+            script () {
+              echarts.init(document.getElementById('solid')).setOption(option);
+            }
+          }
+
+        })(),
       }
     };
   },
