@@ -29,7 +29,7 @@
 import eking from "@/lib/eking"
 import sweet from "sweetalert"
 import copy from "copy-to-clipboard"
-import $ from "jquery"
+// import $ from "jquery"
 
 export default{
 	name: 'refreshcss',
@@ -49,8 +49,8 @@ export default{
 <style scoped>
 
 	img{
-		width:220px;
-		height:160px;
+		width: 220px;
+		height: 160px;
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}
